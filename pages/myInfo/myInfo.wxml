@@ -1,0 +1,120 @@
+<view class="head">
+<view class="msg">
+  <image  class="msgVie" src='../images/msg.png'></image>
+  <image  class="setVie" src='../images/setUp.png'></image>
+</view>
+<view class="headview">
+<image  class="headpic" src='../images/Aoteman.jpg'></image>
+<view class="nameview">
+<text class="name">张三三</text>
+<view class="Phoneview">
+<image  class="smallPhone" src='../images/smallPhone.png'></image>
+<view class="Numberview">
+<text class="phoneNumber">15968310802</text>
+</view>
+</view>
+<view class="Titleview">
+<image  class="smallface" src='../images/face.png'></image>
+<view class="title">
+<text class="titleText">每天进步一点点。</text>
+</view>
+<image  class="modify" src='../images/Modify.png'></image>
+</view>
+</view>
+</view>
+</view>
+<view class="greyBl"></view>
+<!--下方是细分的类别-->
+<view class="body">
+  <view class="type1">
+  <view class='info'>
+    <image  class="detailPic" src='../images/timeTable.png'></image>
+    <text class="infom">课表（周课表）</text>
+    <view class="block-B"></view>
+  </view>
+  <image class="click" src='../images/click.png' ></image>
+  </view>
+  <view class="slightB"></view>
+
+    <view class="type1">
+  <view class='info'>
+    <image  class="detailPic" src='../images/portrait.png'></image>
+    <text class="infom">个人画像</text>
+    <view class="block-B"></view>
+  </view>
+  <image class="click" src='../images/click.png' ></image>
+  </view>
+  <view class="slightB"></view>
+
+    <view class="type1">
+  <view class='info'>
+    <image  class="detailPic" src='../images/plan.png'></image>
+    <text class="infom">我的计划</text>
+    <view class="block-B"></view>
+  </view>
+  <image class="click" src='../images/click.png' ></image>
+  </view>
+  <view class="slightB"></view>
+
+    <view class="type1">
+  <view class='info'>
+    <image  class="detailPic" src='../images/collection.png'></image>
+    <text class="infom">收藏视频</text>
+    <view class="block-B"></view>
+  </view>
+  <image class="click" src='../images/click.png' ></image>
+  </view>
+  <view class="slightB"></view>
+
+    <view class="type1">
+  <view class='info'>
+    <image  class="detailPic" src='../images/history.png'></image>
+    <text class="infom">观看历史</text>
+    <view class="block-B"></view>
+  </view>
+  <image class="click" src='../images/click.png' ></image>
+  </view>
+  <view class="slightB"></view>
+
+    <view class="type1">
+  <view class='info'>
+    <image  class="detailPic" src='../images/note.png'></image>
+    <text class="infom">笔记本</text>
+    <view class="block-B"></view>
+  </view>
+  <image class="click" src='../images/click.png' ></image>
+  </view>
+  <view class="slightB"></view>
+
+    <view class="type1">
+  <view class='info'>
+    <image  class="detailPic" src='../images/score.png'></image>
+    <text class="infom">成绩</text>
+    <view class="block-B"></view>
+  </view>
+  <image class="click" src='../images/click.png' ></image>
+  </view>
+</view>
+
+
+<view class="greyBl-2"></view>
+
+
+<view class="type1">
+  <view class='info'>
+    <image  class="detailPic" src='../images/help.png'></image>
+    <text class="infom">帮助与反馈</text>
+    <view class="block-B"></view>
+  </view>
+  <image class="click" src='../images/click.png' ></image>
+  </view>
+  <view class="slightB"></view>
+
+    <view class="type1">
+  <view class='info'>
+    <image  class="detailPic" src='../images/recommond.png'></image>
+    <text class="infom">邀请好友</text>
+    <view class="block-B"></view>
+  </view>
+  <image class="click" src='../images/click.png' ></image>
+  </view>

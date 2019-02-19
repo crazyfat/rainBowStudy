@@ -1,0 +1,9 @@
+<view class="miancontain">
+  <view class="searchView">
+    <view class="search">
+      <image class="searchImage" src="../images/search.png"></image>
+      <text class="searchText">搜索</text>
+    </view>
+  </view>
+  <view class="block1"></view>
+</view>

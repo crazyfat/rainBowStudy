@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/mainIn/mainIn",
+    "pages/Community/Community",
+    "pages/Compass/Compass",
+    "pages/myInfo/myInfo",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "sfd",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#3b7ffa",
+    "list": [
+      {
+        "pagePath": "pages/mainIn/mainIn",
+        "text": "首页",
+        "iconPath": "pages/images/mainIn.png",
+        "selectedIconPath": "pages/images/mainInBlue.png"
+      },
+      {
+        "pagePath": "pages/Compass/Compass",
+        "text": "发现",
+        "iconPath": "pages/images/compa.png",
+        "selectedIconPath": "pages/images/compaBlue.png"
+      },
+      {
+        "pagePath": "pages/Community/Community",
+        "text": "社区",
+        "iconPath": "pages/images/com.png",
+        "selectedIconPath": "pages/images/comBlue.png"
+      },
+      {
+        "pagePath": "pages/myInfo/myInfo",
+        "text": "我的",
+        "iconPath": "pages/images/myInfo.png",
+        "selectedIconPath": "pages/images/myInfoBlue.png"
+      }
+    ]
+  }
+}

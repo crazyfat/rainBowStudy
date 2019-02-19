@@ -1,0 +1,119 @@
+/* pages/myInfo/myInfo.wxss */
+.head{
+  padding-top: 60rpx;
+  height:100%;
+  background-color:#3b7ffa;
+  box-sizing: border-box; 
+  padding-bottom: 30rpx;
+}
+.msg{
+  display: flex;
+  width: 80%;
+  padding-left: 30rpx;
+}
+.msgVie{
+  width: 50rpx;
+  height: 50rpx;
+}
+.setVie{
+  margin-left: 70%;
+  width: 50rpx;
+  height: 50rpx;
+}
+.headpic{
+  border-radius: 100rpx;
+  width: 130rpx;
+  height: 130rpx;
+  margin-left: 40rpx;
+  margin-top: 30rpx;
+}
+.headview{
+  height:100%;
+  display: flex;
+}
+.name{
+  font-weight: bolder;
+  font-family: 'MI LANTING';
+  color: white;
+}
+.nameview{
+  padding-top:50rpx;
+  padding-left: 60rpx;
+  width: 400rpx;
+}
+.smallPhone{
+  width: 35rpx;
+  height: 35rpx;
+  margin-top: 12rpx;
+}
+.modify{
+  width: 38rpx;
+  height: 38rpx;
+  margin-top: 10rpx;
+}
+.phoneNumber{
+  color:white;
+  font-size: 26rpx;
+}
+.Numberview{
+  padding-left: 8rpx;
+}
+.Phoneview{
+  width:100%;
+  display:flex;
+}
+.Titleview{
+  width:100%;
+  display:flex;
+}
+.smallface{
+  width: 37rpx;
+  height: 37rpx;
+  margin-top: 12rpx;
+}
+.title{
+  padding-left: 8rpx;
+}
+.titleText{
+  color:white;
+  font-size: 26rpx;
+}
+.greyBl{
+  height: 40rpx;
+  width: 100%;
+  background-color:  rgb(248, 248, 248);
+}
+.type1{
+  display: flex;
+}
+.click{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 20rpx;
+}
+.info{
+  height: 70rpx;
+  margin-left: 30rpx;
+  display: flex;
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+  width: 85%;
+}
+.detailPic{
+  width: 50rpx;
+  height: 50rpx;
+}
+.infom{
+  font-size: 30rpx;
+  margin-left: 30rpx;
+}
+.slightB{
+  height: 2rpx;
+  width: 100%;
+  background-color:  #dbdbdb;
+}
+.greyBl-2{
+  height: 30rpx;
+  width: 100%;
+  background-color:  rgb(248, 248, 248);
+}
