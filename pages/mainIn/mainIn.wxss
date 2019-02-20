@@ -69,7 +69,7 @@
 .module1{
   background-color: #fff;
   width: 100%;
-  height: 620rpx;
+  height: 630rpx;
   border-radius:40rpx;
   display: flex;
   padding-top: 20rpx;
@@ -143,4 +143,147 @@
   height: 4rpx;
   margin-left: 2%;
   margin-top: 3%;
+}
+.container2{
+  width: 100%;
+  height: 100%;
+}
+.wheel{
+  height: 100%;
+}
+.swiperImage{
+  width: 100%;
+  height: 300rpx;
+}
+.jobs{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-top: 20rpx;
+}
+.jobs_list{
+  display: flex;        /*弹性盒子*/
+  flex-direction: row;  /*水平方向挤压*/
+  height: 100%;
+  width: 100%;
+}
+.list{
+  height: 100%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /*垂直居中*/
+  align-items: center;      /*水平居中*/
+}
+.listPic{
+  width: 80rpx;
+  height: 80rpx;
+}
+.listT{
+  font-size: 26rpx;
+}
+.jobs_list2{
+  margin-top: 10rpx;
+  display: flex;        /*弹性盒子*/
+  flex-direction: row;  /*水平方向挤压*/
+  height: 100%;
+  width: 100%;
+}
+.block2{
+  margin-top: 20rpx;
+  height: 20rpx;
+  width: 100%;
+  background-color: rgb(248, 248, 248);
+}
+.botVideo{
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+  margin-left: 5%;
+  width: 90%;
+  height: 200rpx;
+  background-size:100% 100%;
+  background-image: url("https://thumbnail0.baidupcs.com/thumbnail/b7d297272bd0f936c1212b7ef0b5dd4d?fid=4023377348-250528-12133084364298&time=1550646000&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-IdeJ8gv0oT29WVbtdq85Ilxfa%2B4%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=1174157797312549423&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video");
+  position:fixed;
+  bottom:0; 
+}
+.cstudyT{
+  margin-left: 26rpx;
+  color: #3b7ffa;
+  font-size: 33rpx;
+}
+.de{
+  width: 34rpx;
+  height: 34rpx;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+}
+.viewA{
+  display: flex;
+  flex-direction: row;
+}
+.viewB{
+  display: flex;
+  flex-direction: row;
+}
+.viewLine{
+  height: 100%;
+  width: 54%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /*垂直居中*/
+  align-items: center;      /*水平居中*/
+  padding-left: 20rpx;
+}
+.videoTitle{
+  margin-top: 10%;
+}
+.BlueLine{
+  width: 100%;
+  height: 4rpx;
+  background-color: #3b7ffa;
+}
+.videoTitle{
+  color: #8a8a8a
+}
+.viewVideo{
+  margin-left: 50rpx;
+}
+.videoPic{
+  height: 120rpx;
+  width: 150rpx;
+  border-radius: 100rpx;
+}
+.planVie{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  margin-top: 20rpx;
+}
+.tVie{
+  width: 78%;
+}
+.planTitle{
+  font-size: 34rpx;
+}
+.vi{
+  margin-top: rpx;
+}
+.BitTitle{
+  font-size: 24rpx;
+  color: #8a8a8a
+}
+.moreP{
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 16rpx;
+}
+.Plan{
+  width: 100%;
+  height: 500rpx;
 }

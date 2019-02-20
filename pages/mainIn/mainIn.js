@@ -6,7 +6,8 @@ Page({
    */
   data: {
     navbar: ['今日课表', '彩虹学堂','我的关注'],
-    currentTab: 0,
+    currentTab: 1,
+    studyContiune:false,
   },
   //顶部tabbar的切换
   navbarTap: function (e) {
@@ -14,6 +15,12 @@ Page({
       currentTab: e.currentTarget.dataset.idx,
     })
     console.log("当前的navbarTab:"+this.data.currentTab)
+  },
+  delete:function(){
+    var that=this
+    that.setData({
+      studyContiune:true
+    })
   },
 
   /**
@@ -34,7 +41,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that=this
+    that.setData({
+      studyContiune:false
+    })
   },
 
   /**

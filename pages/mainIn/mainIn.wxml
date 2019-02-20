@@ -38,4 +38,85 @@
       <view class="line3"></view>
     </view>
   </view>
+
+  <!--彩虹学堂-->
+
+  <view class="container2"hidden="{{currentTab!==1}}">
+    <view class="wheel">
+      <swiper class="swiper_wheel" indicator-dots='true' autoplay='true' interval='2000' >
+        <swiper-item><image class="swiperImage" src='../Eximages/study1.png'></image></swiper-item>
+        <swiper-item><image class="swiperImage" src='../Eximages/study2.png'></image></swiper-item>
+        <swiper-item><image class="swiperImage" src='../Eximages/study3.png'></image></swiper-item>
+      </swiper>
+    </view>
+    <view class="jobs">
+      <view class="jobs_list">
+        <view class="list">
+          <image class="listPic" src="../images/cp.png"></image>
+          <text class="listT">计算机</text>
+        </view>
+        <view class="list">
+          <image class="listPic" src="../images/acc.png"></image>
+          <text class="listT">会计</text>
+        </view>
+        <view class="list">
+          <image class="listPic" src="../images/econ.png"></image>
+          <text class="listT">经济</text>
+        </view>
+        <view class="list">
+          <image class="listPic" src="../images/law.png"></image>
+          <text class="listT">法律</text>
+        </view>
+      </view>
+    
+      <view class="jobs_list2">
+        <view class="list">
+          <image class="listPic" src="../images/math.png"></image>
+          <text class="listT">数学</text>
+        </view>
+        <view class="list">
+          <image class="listPic" src="../images/eng.png"></image>
+          <text class="listT">英语</text>
+        </view>
+        <view class="list">
+          <image class="listPic" src="../images/phy.png"></image>
+          <text class="listT">物理</text>
+        </view>
+        <view class="list">
+          <image class="listPic" src="../images/more.png"></image>
+          <text class="listT">更多</text>
+        </view>
+      </view>
+    </view>
+    <view class="block2"></view>
+    <view class="botVideo" hidden="{{studyContiune}}" >
+    <view class="viewA">
+      <view class="exHead">
+        <image class="exPic" src='../images/Cstudy.png' ></image>
+        <text class="cstudyT">继续学习</text>
+      </view>
+      <image  class="de" src='../images/d.png' bindtap="delete"></image>
+    </view>
+      <view class="viewB">
+        <view class="viewLine">
+          <text class="videoTitle">C语言程序设计与...</text>
+          <view class="BlueLine"></view>
+        </view>
+        <view class="viewVideo">
+          <image class="videoPic" src='../Eximages/C.jpg' ></image>
+        </view>
+      </view>
+    </view>
+    <view class="planVie">
+      <view class="tVie">
+      <text class="planTitle">我的学习</text>
+      </view>
+      <view class="vi">
+      <text class="BitTitle">详细计划</text>
+      </view>
+      <image  class="moreP" src='../images/click.png'></image>
+    </view>
+    <view class="Plan">
+    </view>
+  </view>
 </view>
