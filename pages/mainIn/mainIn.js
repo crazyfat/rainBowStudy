@@ -5,7 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    navbar: ['今日课表', '彩虹学堂','我的关注'],
+    currentTab: 0,
+  },
+  //顶部tabbar的切换
+  navbarTap: function (e) {
+    this.setData({
+      currentTab: e.currentTarget.dataset.idx,
+    })
+    console.log("当前的navbarTab:"+this.data.currentTab)
   },
 
   /**

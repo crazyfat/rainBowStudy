@@ -33,3 +33,114 @@
   width: 100%;
   background-color: #8a8a8a;
 }
+.navbar{  
+  flex: none;  
+  display: flex;  
+  background: #fff;  
+}  
+.navbar .item{  
+  position: relative;  
+  flex: auto;  
+  text-align: center;  
+  line-height: 80rpx;
+  color:  	#CCCCCC; 
+  width: 50%; 
+}  
+.navbar .item.active{  
+  color: black;   
+  width: 50%;
+}  
+.navbar .item.active:after{  
+  content: "";  
+  display: block;  
+  position: absolute;  
+  bottom: 0;  
+  left: 0;  
+  right: 0;  
+  height: 2rpx;  
+  background: black;
+}  
+.container{
+  height: 100%;
+  padding: 40rpx; 
+  background-size:100% 100%;
+  background-image: url("https://thumbnail0.baidupcs.com/thumbnail/46dfed9225217a89ae7e3d37b9ab8ae7?fid=4023377348-250528-35518801081159&time=1550635200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-ddp0pATX5wCZiu2wirAcyZxfUBc%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=1172050389985680534&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video")
+} 
+.module1{
+  background-color: #fff;
+  width: 100%;
+  height: 620rpx;
+  border-radius:40rpx;
+  display: flex;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.module2{
+  background-color: #fff;
+  margin-top: 40rpx;
+  width: 100%;
+  height: 210rpx;
+  border-radius:40rpx;
+  padding-bottom: 20rpx;
+}
+.exHead{
+  padding-left: 20rpx;
+  width: 88%;
+}
+.exPic{
+  margin-top: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.exText{
+  margin-left: 10rpx;
+  color: #36ab60
+}
+.day_timeTable{
+  padding-left: 20rpx;
+  width: 50%;
+  height: 100%;
+}
+.line1{
+  width: 4rpx;
+  height: 100%;
+  background-color: #8a8a8a;
+}
+.nowClass{
+  width: 50%;
+  height: 100%;
+  padding-right: 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+.lesson1{
+  padding-left: 10rpx;
+  width: 100%;
+  height: 300rpx;
+}
+.line2{
+  width: 100%;
+  height: 4rpx;
+  background-color: #8a8a8a;
+}
+.lesson2{
+  padding-left: 10rpx;
+  width: 100%;
+  height: 50%;
+}
+.click{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 20rpx;
+}
+.exTitle{
+  display: flex;
+  flex-direction: row;
+}
+.line3{
+  width: 96%;
+  background-color: #8a8a8a;
+  height: 4rpx;
+  margin-left: 2%;
+  margin-top: 3%;
+}

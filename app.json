@@ -19,15 +19,9 @@
     "list": [
       {
         "pagePath": "pages/mainIn/mainIn",
-        "text": "首页",
+        "text": "学堂",
         "iconPath": "pages/images/mainIn.png",
         "selectedIconPath": "pages/images/mainInBlue.png"
-      },
-      {
-        "pagePath": "pages/Compass/Compass",
-        "text": "发现",
-        "iconPath": "pages/images/compa.png",
-        "selectedIconPath": "pages/images/compaBlue.png"
       },
       {
         "pagePath": "pages/Community/Community",

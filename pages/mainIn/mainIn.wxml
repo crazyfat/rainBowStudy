@@ -6,4 +6,36 @@
     </view>
   </view>
   <view class="block1"></view>
+
+  <!--导航条-->  
+
+  <view class="navbar">  
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" disable='{{itemDisable}}' bindtap="navbarTap">{{item}}</text>  
+  </view>  
+
+  <!--今日课表-->
+
+  <view class="container"hidden="{{currentTab!==0}}">
+    <view class="module1">
+      <view class="day_timeTable">
+      今日课表
+      </view>
+      <view class="line1"></view>
+      <view class="nowClass">
+        <view class="lesson1">当前课程</view>
+        <view class="line2"></view>
+        <view class="lesson2">下节课程</view>
+      </view>
+    </view>
+    <view class="module2">
+      <view class="exTitle">
+      <view class="exHead">
+        <image class="exPic" src='../images/Examination.png' ></image>
+        <text class="exText">考试安排</text>
+      </view>
+      <image  class="click" src='../images/click.png'></image>
+      </view>
+      <view class="line3"></view>
+    </view>
+  </view>
 </view>
