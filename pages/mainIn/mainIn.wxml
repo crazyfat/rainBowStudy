@@ -117,6 +117,57 @@
       <image  class="moreP" src='../images/click.png'></image>
     </view>
     <view class="Plan">
+      <view class="plandetail">
+      <view class="stage1">
+        <view class="stageTitle">
+          <image class="Prog" src='../images/Nowscore.png' ></image>
+          <text class="title1">本阶段目标：</text>
+          <text class="title2">java初识</text>
+        </view>
+        <view class="line4"></view>
+        <view class="stageTitle">
+         <image class="Prog" src='../images/Progress graph.png' ></image>
+          <text class="title1" >目标进度：</text>
+          <progress class="Myprogress" percent="{{PPrecent}}"  border-radius='100' show-info stroke-width="12" />
+        </view>
+        <view class="line4"></view>
+        <view class="stageTitle">
+         <image class="Prog" src='../images/task.png' ></image>
+          <text class="title1">今日任务：</text>
+          <view class="toTask">
+          </view>
+        </view>
+      </view>
+      </view>
     </view>
+  </view>
+
+
+  <!--我的关注-->
+
+
+  <view class="container2"hidden="{{currentTab!==2}}">
+    <view class="userVie">
+      <view class="userPic">
+        <view wx:for="{{userPics}}" wx:key  style='transform:translateX({{-index*30}}rpx)'>
+          <image class='PicMode' src='{{item}}' mode='aspectFill'></image>
+        </view>
+      </view>
+      <view class="tips">
+        <text class="tipsText">关注感兴趣的用户，丰富你的动态</text>
+      </view>
+      <view class="But">
+        <image  class="moreP2" src='../images/click.png'></image>
+      </view>
+    </view>
+    <view hidden='{{hideNull}}'>
+    <view class="empty" >
+      <image class="NullPic" src='../images/Null.png'></image>
+    </view>
+    <view class="textVie">
+      <text class="Null">暂时没有动态哦...</text>
+    </view>
+    
+    </view>   
   </view>
 </view>

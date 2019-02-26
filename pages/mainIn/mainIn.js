@@ -8,6 +8,8 @@ Page({
     navbar: ['今日课表', '彩虹学堂','我的关注'],
     currentTab: 1,
     studyContiune:false,
+    userPics: ['../Eximages/Pic1.jpeg', '../Eximages/Pic2.jpeg','../Eximages/Pic3.jpeg'],
+    PPrecent:56,
   },
   //顶部tabbar的切换
   navbarTap: function (e) {
