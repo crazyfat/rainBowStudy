@@ -1,10 +1,20 @@
 {
+  "cloud":true,
   "pages":[
+ 
+    "pages/question/question",
+      "pages/test/test",
+    "pages/load/load",
     "pages/mainIn/mainIn",
+    "pages/chatWindows/chatWindows",
+    
+    "pages/chat/chat",
+   
     "pages/Community/Community",
     "pages/Compass/Compass",
     "pages/myInfo/myInfo",
     "pages/index/index",
+    "pages/videos/videos",
     "pages/logs/logs"
   ],
   "window": {
@@ -22,6 +32,12 @@
         "text": "学堂",
         "iconPath": "pages/images/mainIn.png",
         "selectedIconPath": "pages/images/mainInBlue.png"
+      },
+      {
+        "pagePath": "pages/videos/videos",
+        "text": "资源",
+        "iconPath": "pages/images/cvideos.png",
+        "selectedIconPath": "pages/images/videos.png"
       },
       {
         "pagePath": "pages/Community/Community",

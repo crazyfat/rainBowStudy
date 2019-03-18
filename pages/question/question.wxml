@@ -1,0 +1,307 @@
+<!--pages/question/quertion.wxml-->
+<view class="container">
+  <text class="last" bindtap="tabreduce" hidden='{{hideLast}}'>上一步</text>
+  <text class="next" bindtap="tabadd" hidden='{{hidenext}}'>下一步</text>
+  <view class="mainContian">
+  <view class="page" hidden="{{Tab!==0}}">
+    <view class="inputVie">
+      <text class="info">姓名:</text>
+      <input class="inputType"></input>
+    </view>
+    <view class="inputVie">
+      <text class="info">学号:</text>
+      <input class="inputType" type="digit" maxlength='8'></input>
+    </view>
+    <view class="inputVie">
+      <text class="info">专业:</text>
+      <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <text class="tip" hidden='{{hideTip}}'>选择专业</text>
+     <text class="major">{{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}}</text>
+      </picker>
+    </view>
+    <view class="inputVie">
+      <text class="job">目标职业:</text>
+      <input class="inputType"></input>
+    </view>
+    <view class="inputVie">
+      <text class="job">目标企业:</text>
+      <input class="inputType" placeholder='选填'></input>
+    </view>
+  </view>
+  
+
+<!--page2-->
+<view class="page" hidden="{{Tab!==1}}">
+    <view class="titleQuesList">
+      <view class="frame">
+        <image class='ques' src='../images/ques.png' ></image>
+        <text class="quesTitle" >{{questionTitle1}}</text>
+      </view>
+      <textarea disabled='true' class="Questextarea">{{question1}}</textarea>
+    </view>
+    <view id='1' class="ansVie" hidden='{{YesHide}}' bindtap='Choose' >
+      <text style='color:#000;'>是</text>
+    </view>
+
+    <view  id='1' class="unansVie" hidden='{{!YesHide}}' bindtap='Choose'>
+      <text style='color:#fff;'>是</text>
+    </view>
+
+    <view  id='2' class="ansVie" hidden='{{NoHide}}' bindtap='Choose'>
+      <text style='color:#000;'>不是</text>
+    </view>
+
+    <view  id='2' class="unansVie" hidden='{{!NoHide}}' bindtap='Choose'>
+      <text style='color:#fff;'>不是</text>
+    </view>
+
+    <view  id='3' class="ansVie" hidden='{{DontKnow}}'  bindtap='Choose'>
+      <text style="color:#000">不知道</text>
+    </view>
+
+    <view  id='3' class="unansVie" hidden='{{!DontKnow}}' bindtap='Choose'>
+      <text style='color:#fff;'>不知道</text>
+    </view>
+    
+    
+  </view>
+
+
+  <!--page3-->
+ <view class="page" hidden="{{Tab!==2}}">
+    <view class="titleQuesList">
+        <view class="frame">
+          <image class='ques' src='../images/ques.png' ></image>
+        <text class="quesTitle" >{{questionTitle2}}</text>
+      </view>
+      <textarea disabled='true' class="Questextarea">{{question2}}</textarea>
+    </view>
+    <view id='1' class="ansVie" hidden='{{YesHide1}}' bindtap='Choose1' >
+      <text style='color:#000;'>是</text>
+    </view>
+
+    <view  id='1' class="unansVie" hidden='{{!YesHide1}}' bindtap='Choose1'>
+      <text style='color:#fff;'>是</text>
+    </view>
+
+    <view  id='2' class="ansVie" hidden='{{NoHide1}}' bindtap='Choose1'>
+      <text style='color:#000;'>不是</text>
+    </view>
+
+    <view  id='2' class="unansVie" hidden='{{!NoHide1}}' bindtap='Choose1'>
+      <text style='color:#fff;'>不是</text>
+    </view>
+
+    <view  id='3' class="ansVie" hidden='{{DontKnow1}}'  bindtap='Choose1'>
+      <text style="color:#000">不知道</text>
+    </view>
+
+    <view  id='3' class="unansVie" hidden='{{!DontKnow1}}' bindtap='Choose1'>
+      <text style='color:#fff;'>不知道</text>
+    </view>
+    
+    
+  </view>
+  
+
+  <!--page4-->
+ <view class="page" hidden="{{Tab!==3}}">
+    <view class="titleQuesList">
+        <view class="frame">
+        <image class='ques' src='../images/ques.png' ></image>
+        <text class="quesTitle" >{{questionTitle3}}</text>
+      </view>
+      <textarea disabled='true' class="Questextarea">{{question3}}</textarea>
+    </view>
+    <view id='1' class="ansVie" hidden='{{YesHide2}}' bindtap='Choose2' >
+      <text style='color:#000;'>是</text>
+    </view>
+
+    <view  id='1' class="unansVie" hidden='{{!YesHide2}}' bindtap='Choose2'>
+      <text style='color:#fff;'>是</text>
+    </view>
+
+    <view  id='2' class="ansVie" hidden='{{NoHide2}}' bindtap='Choose2'>
+      <text style='color:#000;'>不是</text>
+    </view>
+
+    <view  id='2' class="unansVie" hidden='{{!NoHide2}}' bindtap='Choose2'>
+      <text style='color:#fff;'>不是</text>
+    </view>
+
+    <view  id='3' class="ansVie" hidden='{{DontKnow2}}'  bindtap='Choose2'>
+      <text style="color:#000">不知道</text>
+    </view>
+
+    <view  id='3' class="unansVie" hidden='{{!DontKnow2}}' bindtap='Choose2'>
+      <text style='color:#fff;'>不知道</text>
+    </view>
+    
+    
+  </view>
+  
+<!--page5-->
+ <view class="page1" hidden="{{Tab!==4}}">
+    <view class="processVie">
+    <text class="status" >{{status}}</text>
+    <progress class="Myprogress" percent="100"  border-radius='100' stroke-width="16" activeColor='#A0EEE1' active-mode='forwards' active='{{begin}}' />
+    </view>
+ </view>
+ 
+
+
+ <!--page6-->
+<view class="page1" hidden="{{Tab!==5}}">
+    <view class="titleQues">
+      <image class='ques' src='../images/ques.png' ></image>
+      <text class="titleTe">你对以下哪些领域感兴趣？</text>
+    </view>
+    <view class="mainContent">
+    <view class="content" wx:for="{{array}}" data-id='{{key}}' wx:key='key' wx:for-index="key" wx:for-item="itemName" style=" {{array[key].checked?' opacity:1':' opacity:0.5'}} ; background-color:{{randomColorArr[key]}};height:{{height[key]}}rpx;width:{{height[key]}}rpx;position:fixed;bottom:{{bottom[key]}}rpx;right:{{right[key]}}rpx ;"  bindtap='click' >
+    <text  class="type" id='{{key}}'style="color:{{fontColor}}">{{array[key].name}}</text>
+    </view>
+    </view>
+ </view>
+
+ 
+
+
+ <!--page7-->
+<view class="page1" hidden="{{Tab!==6}}">
+    <view class="titleQues">
+      <image class='ques' src='../images/ques.png' ></image>
+      <text class="titleTe">你掌握或了解以下哪些技术？</text>
+    </view>
+    <view class="mainContent">
+    <view class="content" wx:for="{{tecono}}" data-id='{{key}}' wx:key='key' wx:for-index="key" wx:for-item="itemName" style=" {{tecono[key].checked?' opacity:1':' opacity:0.5'}} ; background-color:{{randomColorArr[key]}};height:{{height[key]}}rpx;width:{{height[key]}}rpx;position:fixed;bottom:{{bottom[key]}}rpx;right:{{right[key]}}rpx ;"  bindtap='click2' >
+    <text  class="type" id='{{key}}'style="color:{{fontColor}}">{{tecono[key].name}}</text>
+    </view>
+    </view>
+</view>
+
+
+<!--page8-->
+ <view class="page1" hidden="{{Tab!==7}}">
+    <view class="processVie">
+    <text class="status" >{{status2}}</text>
+    <progress class="Myprogress" percent="100"  border-radius='100' stroke-width="16" activeColor='#ECAD9E ' active-mode='forwards' active='{{begin2}}' />
+    </view>
+ </view>
+
+
+
+<!--page9-->
+ <view class="lastPage" hidden="{{Tab!==8}}">
+    <button class="but" bindtap="OKto" >完成</button>
+    <view class="topVie">
+      <view class="PicTop">
+        <image class="userPic" src='../userImages/user.png'></image>
+        <view class="infoVie">
+          <text class="infoma">姓名：{{userInfo[0]}}</text>
+          <text class="infoma">年级：{{userInfo[1]}}</text>
+          <text class="infoma">年龄：{{userInfo[2]}}</text>
+          <text class="infoma">专业：{{userInfo[3]}}</text>
+        </view>
+      </view>
+      <text class="myJob" >目标职业：{{userInfo[4]}}</text>
+    </view>
+    <scroll-view scroll-y class="jobInfo">
+      <view class="bility">     
+        <!--用户分析-->
+          <view class="get">
+          <text class="getTitle">计划分析：</text>
+          <view class="canvasVie">
+              <canvas class="canvas" canvas-id="canvas1" ></canvas>
+           </view>
+        </view>
+      <!--习得-->
+        <view class="get">
+          <text class="getTitle">已修：</text>
+          <view class="getJob">
+            <text class="list1">数据结构</text>
+            <image class="IfFin" src='../images/unFin.png' ></image>
+          </view>
+          <view class="getJob">
+            <text class="list1">面向对象——Java</text>
+            <image class="IfFin" src='../images/Fin.png' ></image>
+          </view>
+          <view class="getJob">
+            <text class="list1">数据库原理</text>
+            <image class="IfFin" src='../images/Fin.png' ></image>
+          </view>
+          <view class="getJob">
+            <text class="list1">数据库课程设计</text>
+            <image class="IfFin" src='../images/Fin.png' ></image>
+          </view>
+          <view class="getJob">
+            <text class="list1">英语六级</text>
+            <image class="IfFin" src='../images/unFin.png' ></image>
+          </view>
+        </view>
+      <!--未习得-->
+      <view style='height:40rpx'></view>
+        <view class="get">
+          <text class="getTitle">未修：</text>
+          <view class="getJob">
+            <text class="list1">Jsp&Servlet动态网页</text>
+            <image class="IfFin" src='../images/wait.png' ></image>
+          </view>
+          <view class="getJob">
+            <text class="list1">J2EE框架</text>
+            <image class="IfFin" src='../images/wait.png' ></image>
+          </view>
+          <view class="getJob">
+            <text class="list1">Oracle数据库</text>
+            <image class="IfFin" src='../images/wait.png' ></image>
+          </view>
+          <view class="getJob">
+            <text class="list1">Linux操作系统</text>
+            <image class="IfFin" src='../images/wait.png' ></image>
+          </view>
+          <view class="getJob">
+            <text class="list1">分布式微服务</text>
+            <image class="IfFin" src='../images/wait.png' ></image>
+          </view>
+          ...
+        </view>
+      <!--当前进度-->
+        <view style='height:40rpx'></view>
+        <view class="get">
+          <text class="getTitle">目标：</text>
+          <text class="list2">Java工程师</text>
+        </view>
+        <view style='height:40rpx'></view>
+        <view class="get">
+          <text class="getTitle">目标进度：</text>
+          <progress percent="{{PPrecent}}"  border-radius='100' show-info stroke-width="12" />
+        </view>
+      <!--当前阶段-->
+        <view style='height:40rpx'></view>
+        <view class="get">
+          <text class="getTitle">当前阶段：</text>
+          <text class="list2">Java初始</text>
+        </view>
+
+      <!--推荐学习-->
+        <view style='height:40rpx'></view>
+        <view class="get">
+          <text class="getTitle">现阶段为您推荐课程：</text>
+          <text class="list3">王老师疯狂Java  ——王绍平</text>
+          <text class="list3">算法分析导论  ——侯得纲</text>
+          <text class="list3">代码整洁之道  ——林强</text>
+          <text class="list3">...</text>
+        </view>
+  
+
+
+      </view>
+    </scroll-view>
+
+
+
+
+ </view>
+
+<!--page结束-->
+</view>
+</view>

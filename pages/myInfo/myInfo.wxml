@@ -4,11 +4,11 @@
   <image  class="setVie" src='../images/setUp.png'></image>
 </view>
 <view class="headview">
-<image  class="headpic" src='../images/Aoteman.jpg'></image>
+<image  class="headpic" src='{{myInfo[0].avatar}}'></image>
 <view class="nameview">
-<text class="name">张三三</text>
+<text class="name">{{myInfo[0].nickName}}</text>
 <view class="Phoneview">
-<image  class="smallPhone" src='../images/smallPhone.png'></image>
+<image  class="smallPhone" src='../images/sp.png'></image>
 <view class="Numberview">
 <text class="phoneNumber">15968310802</text>
 </view>
@@ -29,7 +29,7 @@
   <view class="type1">
   <view class='info'>
     <image  class="detailPic" src='../images/timeTable.png'></image>
-    <text class="infom">课表（周课表）</text>
+    <text class="infom" >课表（周课表）</text>
     <view class="block-B"></view>
   </view>
   <image class="click" src='../images/click.png' ></image>

@@ -64,7 +64,7 @@
   height: 100%;
   padding: 40rpx; 
   background-size:100% 100%;
-  background-image: url("https://thumbnail0.baidupcs.com/thumbnail/46dfed9225217a89ae7e3d37b9ab8ae7?fid=4023377348-250528-35518801081159&time=1550635200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-ddp0pATX5wCZiu2wirAcyZxfUBc%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=1172050389985680534&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video")
+  background-image: url("https://7261-rain-bow-study-a1855a-1258742205.tcb.qcloud.la/backPIc/bcd.png?sign=397bebf284eb98944862c6a2dd8616de&t=1552286478")
 } 
 .module1{
   background-color: #fff;
@@ -148,41 +148,7 @@
   width: 100%;
   height: 100%;
 }
-.wheel{
-  height: 100%;
-}
-.swiperImage{
-  width: 100%;
-  height: 300rpx;
-}
-.jobs{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  margin-top: 20rpx;
-}
-.jobs_list{
-  display: flex;        /*弹性盒子*/
-  flex-direction: row;  /*水平方向挤压*/
-  height: 100%;
-  width: 100%;
-}
-.list{
-  height: 100%;
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;  /*垂直居中*/
-  align-items: center;      /*水平居中*/
-}
-.listPic{
-  width: 80rpx;
-  height: 80rpx;
-}
-.listT{
-  font-size: 26rpx;
-}
+
 .jobs_list2{
   margin-top: 10rpx;
   display: flex;        /*弹性盒子*/
@@ -191,73 +157,71 @@
   width: 100%;
 }
 .block2{
-  margin-top: 20rpx;
   height: 20rpx;
   width: 100%;
   background-color: rgb(248, 248, 248);
 }
 .botVideo{
   display: flex;
-  flex-direction: column;
-  border-top-left-radius: 40rpx;
-  border-top-right-radius: 40rpx;
-  margin-left: 5%;
-  width: 90%;
-  height: 200rpx;
+  flex-direction: row;
+  border-radius: 20rpx;
+  margin-left: 2%;
+  width: 96%;
+  height: 150rpx;
   background-size:100% 100%;
-  background-color: rgb(235, 232, 232);
+  background-color: rgba(0, 0, 0, 0.788);
   position:fixed;
-  bottom:0; 
-    border-style: solid;
-  border-width: 4rpx;
-  border-color: rgb(195, 197, 204);
+  bottom:15rpx; 
 }
-.cstudyT{
-  margin-left: 26rpx;
-  color: #3b7ffa;
-  font-size: 33rpx;
+.closeVie{
+  bottom: 120;
+  position:fixed;
+  height: 50rpx;
+  width: 50rpx;
+  border-bottom-right-radius: 100rpx;
+  border-top-left-radius: 40rpx;
+  background-color: rgb(58, 56, 56);
 }
-.de{
-  width: 34rpx;
-  height: 34rpx;
-  margin-top: 20rpx;
-  margin-right: 20rpx;
+.closePic{
+  height: 40rpx;
+  width: 40rpx
 }
-.viewA{
-  display: flex;
-  flex-direction: row;
-}
-.viewB{
-  display: flex;
-  flex-direction: row;
-}
-.viewLine{
-  height: 100%;
-  width: 54%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;  /*垂直居中*/
-  align-items: center;      /*水平居中*/
-  padding-left: 20rpx;
-}
-.videoTitle{
-  margin-top: 10%;
-}
-.BlueLine{
-  width: 100%;
-  height: 4rpx;
-  background-color: #3b7ffa;
-}
-.videoTitle{
-  color: #8a8a8a
-}
-.viewVideo{
-  margin-left: 50rpx;
+.vieoVie{
+  margin-top: 15rpx;
+  margin-left: 15rpx;
 }
 .videoPic{
+  border-radius: 20rpx;
+  width: 120rpx;
   height: 120rpx;
-  width: 150rpx;
-  border-radius: 100rpx;
+}
+.className{
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction:column;
+  align-items: left;
+  justify-content: center;
+}
+.bigTe{
+  color: #fff;
+  font-size: 32rpx;
+}
+.smallTe{
+   color: rgb(190, 190, 190);
+  font-size: 30rpx;
+}
+.startVie{
+  border-style: solid;
+  border-width: 4rpx;
+  border-color: #fff;
+  border-radius: 50rpx;
+  height: 80rpx;
+  width: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30rpx;
+  margin-left: 80rpx;
 }
 .planVie{
   width: 100%;
@@ -356,7 +320,7 @@
 }
 
 .Plan{
-  height: 500rpx;
+  height: 100%;
   width: 100%;
   margin-top: 15rpx;
   padding: 20rpx;
@@ -364,6 +328,7 @@
   background-color: rgb(239, 240, 241);
 }
 .plandetail{
+  width: 88%;
   background-color: #fff;
   border-radius: 30rpx;
   border-style: solid;
@@ -379,7 +344,7 @@
 }
 .title1{
   margin-left: 14rpx;
-  font-size: 33rpx;
+  font-size: 31rpx;
 }
 .title2{
   font-size: 30rpx;
@@ -399,5 +364,44 @@
   width: 66%;
 }
 .toTask{
-  height: 300rpx;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.taskDe{
+  width: 90%;
+  font-size: 28rpx;
+  color: rgb(76, 76, 80);
+  text-decoration-line: underline;
+}
+.typeB{
+  width: 100%;
+  margin-bottom: 16rpx;
+  display: flex;
+  flex-direction: row;
+}
+.IfFin{
+  width: 40rpx;
+  height: 40rpx
+}
+/*这是统计图*/
+.canvasVie{
+  border-style: solid;
+  border-width: 2rpx;
+  border-top-color: rgb(214, 215, 216);
+  border-bottom-color: rgb(214, 215, 216);
+  border-right-color: rgb(219, 220, 224);
+  border-left-color: rgb(219, 220, 224);
+  margin-top: 13rpx;
+  width: 100%;
+  padding: 0;
+  background-color:rgb(239, 240, 241);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.canvas {
+     width: 360px;
+    height: 300px;
+
 }

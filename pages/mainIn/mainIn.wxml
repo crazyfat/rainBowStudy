@@ -42,70 +42,30 @@
   <!--彩虹学堂-->
 
   <view class="container2"hidden="{{currentTab!==1}}">
-    <view class="wheel">
-      <swiper class="swiper_wheel" indicator-dots='true' autoplay='true' interval='2000' >
-        <swiper-item><image class="swiperImage" src='../Eximages/study1.png'></image></swiper-item>
-        <swiper-item><image class="swiperImage" src='../Eximages/study2.png'></image></swiper-item>
-        <swiper-item><image class="swiperImage" src='../Eximages/study3.png'></image></swiper-item>
-      </swiper>
-    </view>
-    <view class="jobs">
-      <view class="jobs_list">
-        <view class="list">
-          <image class="listPic" src="../images/cp.png"></image>
-          <text class="listT">计算机</text>
-        </view>
-        <view class="list">
-          <image class="listPic" src="../images/acc.png"></image>
-          <text class="listT">会计</text>
-        </view>
-        <view class="list">
-          <image class="listPic" src="../images/econ.png"></image>
-          <text class="listT">经济</text>
-        </view>
-        <view class="list">
-          <image class="listPic" src="../images/law.png"></image>
-          <text class="listT">法律</text>
-        </view>
-      </view>
-    
-      <view class="jobs_list2">
-        <view class="list">
-          <image class="listPic" src="../images/math.png"></image>
-          <text class="listT">数学</text>
-        </view>
-        <view class="list">
-          <image class="listPic" src="../images/eng.png"></image>
-          <text class="listT">英语</text>
-        </view>
-        <view class="list">
-          <image class="listPic" src="../images/phy.png"></image>
-          <text class="listT">物理</text>
-        </view>
-        <view class="list">
-          <image class="listPic" src="../images/more.png"></image>
-          <text class="listT">更多</text>
-        </view>
+      <view class="block2"></view>
+  <view class="planVie">
+      <view class="tVie">
+      <text class="planTitle">学习进度</text>
       </view>
     </view>
-    <view class="block2"></view>
+    <view class="canvasVie">
+        <canvas class="canvas" canvas-id="canvas1" ></canvas>
+    </view>
     <view class="botVideo" hidden="{{studyContiune}}" >
-    <view class="viewA">
-      <view class="exHead">
-        <image class="exPic" src='../images/Cstudy.png' ></image>
-        <text class="cstudyT">继续学习</text>
+      <view class="closeVie">
+        <image  class="closePic" src='../images/close.png' bindtap="delete"></image>
       </view>
-      <image  class="de" src='../images/d.png' bindtap="delete"></image>
-    </view>
-      <view class="viewB">
-        <view class="viewLine">
-          <text class="videoTitle">C语言程序设计与...</text>
-          <view class="BlueLine"></view>
-        </view>
-        <view class="viewVideo">
-          <image class="videoPic" src='../Eximages/C.jpg' ></image>
-        </view>
+      <view class="vieoVie">
+        <image  class="videoPic" src='../Eximages/java.jpg'></image>
       </view>
+      <view class="className">
+        <text class="bigTe">王老师疯狂Java</text>
+        <text class="smallTe">Java初识</text>
+      </view>
+      <view class="startVie">
+        <text class="bigTe">进入学习</text>
+      </view>
+  
     </view>
     <view class="planVie">
       <view class="tVie">
@@ -122,24 +82,37 @@
         <view class="stageTitle">
           <image class="Prog" src='../images/Nowscore.png' ></image>
           <text class="title1">本阶段目标：</text>
-          <text class="title2">java初识</text>
+          <text class="title2">Java初识</text>
         </view>
         <view class="line4"></view>
         <view class="stageTitle">
          <image class="Prog" src='../images/Progress graph.png' ></image>
           <text class="title1" >目标进度：</text>
-          <progress class="Myprogress" percent="{{PPrecent}}"  border-radius='100' show-info stroke-width="12" />
+          <progress class="Myprogress" percent="{{PPrecent}}"  border-radius='100' show-info stroke-width="12"  />
         </view>
         <view class="line4"></view>
         <view class="stageTitle">
          <image class="Prog" src='../images/task.png' ></image>
           <text class="title1">今日任务：</text>
           <view class="toTask">
+            <view class="typeB">
+            <text class="taskDe">1:王老师疯狂Java</text><image class="IfFin" src='../images/Fin.png' ></image>
+            </view>
+            <view class="typeB">
+            <text class="taskDe">2:数据结构与算法分析...</text><image class="IfFin" src='../images/unFin.png' ></image>
+            </view>
+            <view class="typeB">
+            <text class="taskDe">3:代码整洁之道</text><image class="IfFin" src='../images/unFin.png' ></image>
+            </view>
           </view>
         </view>
       </view>
       </view>
     </view>
+    x
+
+    x
+   
   </view>
 
 

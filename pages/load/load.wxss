@@ -1,0 +1,41 @@
+/* pages/load/load.wxss */
+.conta{
+position: fixed;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+  background-size: 100% 100%; 
+  background-image: url('https://7261-rain-bow-study-a1855a-1258742205.tcb.qcloud.la/backPIc/load.jpg?sign=f638c1d630652bcb65fa367d767863ff&t=1552387650');
+  opacity: 0.9
+}
+.getInfobut{
+  border: 0;
+  height: 100rpx;
+  width: 500rpx;
+  border-radius: 80rpx;
+  margin-top: 400rpx;
+  background: linear-gradient(to right, #3b7ffa , rgba(48, 48, 245, 0.5));
+  display: flex;
+  flex-direction: row;
+  align-items:center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+  box-shadow: 0rpx 1rpx 20rpx  2rpx rgba(31, 66, 223, 0.527);
+}
+.wePic{
+  height: 70rpx;
+  width: 70rpx;
+}
+.text{
+  color: #fff;
+  font-size: 36rpx;
+  margin-left: 10rpx;
+}
+.logo{
+  height: 400rpx;
+  width:400rpx;
+  border-radius: 400rpx;
+  
+}

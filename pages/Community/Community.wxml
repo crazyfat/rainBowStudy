@@ -1,2 +1,31 @@
 <!--pages/Community/Community.wxml-->
-<text>pages/Community/Community.wxml</text>
+<view class="top_ba">
+  <image class="addFriend" src='../images/friend.png'></image>
+  <text class="Bigtitle">12条通知消息</text>
+</view>
+<view class='msg'>
+   <view class="module1">
+      <image class='Picmodule' src='../images/communityPic.png'></image>
+      <text class="textModule">我的社区</text>
+    </view>
+     <view class="module1">
+      <image class='Picmodule' src='../images/msgTip.png'></image>
+      <text class="textModule">通知信息</text>
+    </view>
+     <view class="module1">
+      <image class='Picmodule' src='../images/Interaction.png'></image>
+      <text class="textModule">互动消息</text>
+    </view>
+</view>
+<view class='block'></view>
+<view class="chat" wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemName" >
+  <view class="chatVie" bindtap='inChat' id='{{array[idx].name}}'>
+    <image class="exHead" src='{{array[idx].url}}'></image>
+    <view class='Textlist'>
+      <text class="title">{{array[idx].name}}</text>
+      <text class='detail'>[{{array[idx].msgNum}}条]{{array[idx].lastPerson}}:{{array[idx].msg}}</text>
+    </view>
+    <text class="time">{{array[idx].time}}</text>
+  </view>
+  <view class="line"></view>
+</view>

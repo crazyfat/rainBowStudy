@@ -2,7 +2,7 @@
 .head{
   padding-top: 60rpx;
   height:100%;
-  background-color:#3b7ffa;
+  background: linear-gradient( #3b7ffa , rgb(49, 225, 248));
   box-sizing: border-box; 
   padding-bottom: 30rpx;
 }

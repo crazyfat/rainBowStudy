@@ -1,0 +1,8 @@
+<!--pages/load/load.wxml-->
+<view class="conta">
+
+   <button class="getInfobut" hidden='{{butHide}}' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+   <image class="wePic" src='../images/wc.png'></image>
+   <text class="text">微信登录</text>
+   </button>
+</view>

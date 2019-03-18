@@ -1,0 +1,311 @@
+/* pages/question/quertion.wxss */
+.container{
+  position: fixed;
+  background-color: rgb(211, 211, 211);
+  height: 100%;
+  width: 100%;
+  padding: 50rpx;
+  padding-top: 70rpx;
+  padding-bottom: 50rpx;
+}
+.page{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page1{
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30%;
+}
+.mainContian{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 50rpx;
+  border-style: solid;
+  border-width: 16rpx;
+  border-color: #3b7ffa;
+  box-shadow:0rpx 1rpx 20rpx  2rpx rgba(10, 48, 216, 0.658);
+}
+.next{
+  position: fixed;
+  top: 150rpx;
+  right: 100rpx;
+  color: #3b7efaaf;
+}
+.last{
+  position: fixed;
+  top: 150rpx;
+  left: 100rpx;
+  color: #3b7efaaf;
+
+}
+.ignore{
+  position: fixed;
+  bottom: 100rpx;
+  left: 45%;
+  color: #1b191954;
+  text-decoration: underline;
+  font-size: 32rpx;
+}
+.inputVie{
+  margin-top: 40rpx;
+  width: 80%;
+  height: 7%;
+  border-radius: 50rpx;
+  border-style: solid;
+  border-width: 5rpx;
+  border-color: #3b7ffa;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ansVie{
+  margin-top: 40rpx;
+  width: 80%;
+  height: 7%;
+  border-radius: 50rpx;
+  border-style: solid;
+  border-width: 5rpx;
+  border-color: #3b7ffa;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.unansVie{
+  margin-top: 40rpx;
+  width: 80%;
+  height: 7%;
+  border-radius: 50rpx;
+  background-color: #3b7ffa;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.info{
+  width: 20%;
+  margin-left: 5%;
+  color: #1b1919af
+}
+.tip{
+  color: #1b1919af
+}
+.major{
+  font-size:30rpx; 
+}
+.job{
+  width: 40%;
+  margin-left: 5%;
+  color: #1b1919af
+}
+.titleQues{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%
+}
+.titleQuesList{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%
+}
+.frame{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.quesTitle{
+  margin-left: 20rpx;
+}
+.ques{
+  height: 60rpx;
+  width: 60rpx;
+}
+.Questextarea{
+  margin-top: 30rpx;
+  width: 80%;
+  text-indent: 72rpx;
+  text-align: left;
+  font-size: 36rpx;
+  color: #1b1919af
+}
+.titleTe{
+  margin-left: 20rpx;
+}
+.content{
+  border-radius: 180rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.type{
+  font-size: 38rpx
+}
+.Myprogress{
+  width: 80%;
+}
+.processVie{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30%;
+}
+.status{
+  margin-bottom: 10rpx;
+  font-size: 32rpx;
+  color: rgba(0, 0, 0, 0.5);
+}
+.lastPage{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.topVie{
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 20rpx;
+  border-radius: 40rpx;
+  border-style: solid;
+  border-width: 4rpx;
+  border-color: #1b19192d;
+  box-shadow:0rpx 1rpx 14rpx  2rpx #1b19192d;
+  height: 350rpx;
+}
+.PicTop{
+  width: 100%;
+  height: 80%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+}
+.userPic{
+  width: 35%;
+  height: 100%;
+   box-shadow:0rpx 1rpx 20rpx  2rpx #1b19190a;
+}
+.infoVie{
+  margin-left: 20rpx;
+  height: 100%;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.infoma{
+  margin-top: 10rpx;
+  font-size: 38rpx;
+  color: #1b1919af;
+  height: 25%;
+  width: 100%;
+}
+.line{
+  background-color: #1b19192d;
+  height: 2rpx;
+  width: 100%;
+}
+.myJob{
+  color: #1b1919af;
+  font-size: 40rpx;
+  margin-top: 20rpx;
+}
+.but{
+  position: fixed;
+  bottom: 80rpx;
+  background-color: #3b7ffa ;
+  color: #fff;
+  width: 140rpx;
+  border-radius: 120rpx; 
+  font-size: 36rpx;
+  box-shadow:0rpx 1rpx 20rpx  2rpx #3b7efa7c;
+}
+.jobInfo{
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 20rpx;
+  border-radius: 40rpx;
+  border-style: solid;
+  border-width: 4rpx;
+  border-color: #1b19192d;
+  box-shadow:0rpx 1rpx 14rpx  2rpx #1b19192d;
+  height: 800rpx;
+  margin-bottom: 40rpx;
+}
+.get{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.getJob{
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-style: solid;
+  border-width: 2rpx;
+ border-top-color: #fff;
+  border-bottom-color: rgba(143, 148, 153, 0.527);
+  border-right-color: #fff;
+  border-left-color: #fff;
+}
+.getTitle{
+  font-size: 40rpx;
+}
+.list1{
+  width: 90%;
+  font-size: 36rpx;
+  color: #1b1919af
+}
+.list2{
+  width: 90%;
+  font-size: 38rpx;
+  color: #0e932dc5
+}
+.IfFin{
+  height: 50rpx;
+  width:50rpx;
+}
+.canvasVie{
+  height: 100%;
+  width: 260px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+.canvas {
+     width: 260px;
+    height: 250px;
+}
+.list3{
+  margin-top: 10rpx;
+  width: 90%;
+  font-size: 36rpx;
+  color: #000000c5;
+}
