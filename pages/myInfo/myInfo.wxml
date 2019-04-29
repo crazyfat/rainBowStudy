@@ -58,8 +58,8 @@
 
     <view class="type1">
   <view class='info'>
-    <image  class="detailPic" src='../images/collection.png'></image>
-    <text class="infom">收藏视频</text>
+    <image  class="detailPic" src='../images/get.png'></image>
+    <text class="infom">点名签到</text>
     <view class="block-B"></view>
   </view>
   <image class="click" src='../images/click.png' ></image>

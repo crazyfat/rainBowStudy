@@ -59,10 +59,27 @@
       </view>
     </view>
     <view class="block2"></view>
-  
-    
-  
-
   </view>
+      <view class="planVie">
+      <view class="tVie">
+      <text class="planTitle">热门资源</text>
+      </view>
+      <view class="vi">
+      <text class="BitTitle">查看更多</text>
+      </view>
+      <image  class="moreP" src='../images/click.png'></image>
+    </view>
+    <view wx:for="{{Videoarray}}" wx:key='key' wx:for-index="key">
+    <view class='videpList'>
+      <image class="videoPics" src='../Eximages/java.jpg' ></image>
+      <view class="videotext" >
+        <text class='videoname'>{{Videoarray[key].name}}</text>
+        <text class='videoTip'>{{Videoarray[key].title}}</text>
+        <text class='videoTeacher'>{{Videoarray[key].teacher}}</text>
+      </view>
+    </view>
+    </view>
+
+
 
 </view>

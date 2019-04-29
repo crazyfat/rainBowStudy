@@ -1,24 +1,74 @@
-/**index.wxss**/
-
-.progress {
-  width: 95%;
-  margin: 20rpx;
-}
-
-.section {
-  width: 93%;
-  margin: 20rpx;
-  background-color: #ccc;
-  padding: 10rpx;
-  font-size: 30rpx;
-}
-
-.btn {
-  width: 95%;
-  margin-top: 10rpx;
-}
-
-.text {
+.Avideo{
   width: 100%;
-  font-size: 30rpx;
+}
+.topBlock{
+  background: linear-gradient(to right, #3b7ffa , rgb(49, 225, 248));
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  height: 130rpx;
+  width: 100%;
+  padding-left: 30rpx;
+  color: rgb(107, 103, 103)
+}
+.return{
+  height: 60rpx;
+  width: 8%;
+}
+.nameVie{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+}
+.grey_line{
+  background-color: rgb(209, 209, 209);
+  width: 90%;
+  height: 2rpx;
+  margin-left: 5%;
+}
+.teachervie{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  height: 260rpx;
+}
+.teaPic{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 80rpx;
+}
+.teaDe{
+  margin-left: 60rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  height: 200rpx;
+  box-shadow:0rpx 1rpx 20rpx  2rpx rgba(173, 191, 245, 0.658);
+  padding: 30rpx; 
+}
+.course{
+  margin-top: 30rpx;
+  word-break: break-all;
+  color:rgb(100, 97, 97);
+  font-size: 31rpx;
+  width: 92%;
+  margin-left: 4%;
+  height: 100%;
+}
+.save{
+  color: #fff;
+  background-color: #3b7ffa;
+  border-radius: 100rpx;
+  width: 60%;
 }

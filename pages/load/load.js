@@ -14,11 +14,9 @@ Page({
     wx.checkSession({
       success: function (res) {
         console.log(res, '登录未过期')
-        setTimeout(function () {
-          wx.switchTab({
-            url: '../mainIn/mainIn'
-          })
-        }, 1000)
+        that.setData({
+          butHide: false
+        })
       },
       fail: function (res) {
         console.log(res, '登录过期了')
@@ -59,6 +57,9 @@ Page({
       success(res) {
         // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
         console.log(res)
+        wx.navigateTo({
+          url: '../question/question',
+        })
       }
     })
   }

@@ -6,6 +6,10 @@ Page({
    */
   data: {
     userInfo:['张元庆','大二','19','计算机','网易Java工程师'],
+    Videoarray: [{ name: '王老师疯狂Java（上）', title: 'java教程、初级实践', teacher: '王成恩' },
+      { name: '算法导论', title: '计算机算法、网络', teacher: '金立斌' },
+    { name: '代码整洁之道', title: '代码质量、程序维护', teacher: '林丽' }],
+    videoImages: ['../Eximages/java.jpg', '../userImages/daolun.jpg','../userImages/zhengjie.jpg'],
     PPrecent:11,
     YesHide:false,
     NoHide:false,
@@ -22,13 +26,15 @@ Page({
     Tab:0,
     begin:false,
     begin2:false,
+    begin3: false,
     status:'采集测试数据',
     status2: '用户能力分析',
+    status3:'建立能力测试树',
     question1:'虚拟机栈描述的是Java方法执行的内存模型，用于存储局部变量，操作数栈，动态链接，方法出口等信息，是线程隔离的。',
     questionTitle1:'JVM内存',
     question2:'PROPAGATION_NESTED：支持当前事务，新增Savepoint点，与当前事务同步提交或回滚。',
     questionTitle2:'SPRING的事务传播',
-    question3:'Servlet在易用性上强于cgi，它提供了大量的实用工具例程，例如自动地解析和解码HTML表单数据、读取和设置HTTP头、处理Cookie、跟踪会话状态等。',
+    question3:'servlet在易用性上强于cgi，它提供了大量的实用工具例程，例如自动地解析和解码html表单数据、读取和设置http头、处理Cookie、跟踪会话状态等。',
     questionTitle3:'servlet和cgi',
     array: [
       { name: "嵌入式", value: '0', checked: false },
@@ -48,7 +54,6 @@ Page({
       { name: "Linux", value: '5', checked: false },
       { name: "微服务架构", value: '6', checked: false },
     ],
-    hideLast:true,
     hidenext:false,
     bottom: ['140', '170', '360', '400', '380', '580', '560'],
     right: ['160', '400', '110', '280', '480', '160', '420'],
@@ -227,52 +232,40 @@ Page({
     console.log(e)
   },
   tabadd:function(){
+    
     var that=this
-    if (that.data.Tab <=3)
+    console.log(that.data.Tab)
+    if (that.data.Tab == 0){
+      that.setData({
+        begin3: true,
+        hidenext: true
+      })
+      that.Status3()
+    }
+      if (that.data.Tab <= 4 )
     that.setData({
       Tab:that.data.Tab+1,
-      hideLast: false
     })
-    if (that.data.Tab==4){
+    if (that.data.Tab==5){
       that.setData({
         begin: true,
-        hideLast:true,
         hidenext:true
       })
       that.Status()
     }
-    if (that.data.Tab>=5)
+    if (that.data.Tab>=6)
       that.setData({
         Tab: that.data.Tab + 1,
-        hideLast: false
       })
-    if (that.data.Tab ==7){
+    if (that.data.Tab ==8){
       that.setData({
         begin2: true,
-        hideLast: true,
         hidenext: true
       })
       that.Status2()
     }
   },
-  tabreduce:function(){
-    var that = this
-    if(that.data.Tab==1){
-      that.setData({
-        hideLast:true
-      })
-    }
-    if (that.data.Tab == 6)
-      that.setData({
-        Tab: that.data.Tab - 1,
-        hideLast: true
-      })
-      else{
-    that.setData({
-      Tab: that.data.Tab - 1,
-    })
-      }
-  },
+ 
   bindMultiPickerChange: function (e) {
     //console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
@@ -377,6 +370,16 @@ Page({
     }, 3700)
 
   },
+  Status3: function () {
+    var that = this
+    setTimeout(function () {
+      that.setData({
+        Tab: that.data.Tab + 1,
+        hidenext: false
+      })
+    }, 3000)
+
+  },
   Status2: function () {
     var that = this
     setTimeout(function () {
@@ -398,7 +401,6 @@ Page({
       that.setData({
         Tab: that.data.Tab + 1,
         hidenext: true,
-        hidelast:true
       })
     }, 3700)
 

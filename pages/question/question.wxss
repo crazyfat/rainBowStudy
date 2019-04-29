@@ -144,7 +144,8 @@
   text-indent: 72rpx;
   text-align: left;
   font-size: 36rpx;
-  color: #1b1919af
+  color: #1b1919af;
+  word-break: break-all;
 }
 .titleTe{
   margin-left: 20rpx;
@@ -308,4 +309,42 @@
   width: 90%;
   font-size: 36rpx;
   color: #000000c5;
+  text-decoration: underline;
+}
+.videoPics{
+  border-radius: 20rpx;
+  width: 200rpx;
+  height: 150rpx;
+}
+.videotext{
+  padding: 10rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.videoname{
+  height: 60rpx;
+  font-size: 27rpx;
+}
+.videoTip{
+  height: 50rpx;
+  font-size: 26rpx;
+  color: rgb(100, 98, 98);
+}
+.videoTeacher{
+  font-size: 26rpx;
+  color: rgb(65, 63, 63);
+}
+.videpList{
+  margin-top: 30rpx;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  border-style: solid;
+  border-width: 3rpx;
+  border-top-color: #fff;
+  border-bottom-color: rgba(143, 148, 153, 0.527);
+  border-right-color: #fff;
+  border-left-color: #fff;
 }

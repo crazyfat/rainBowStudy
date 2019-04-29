@@ -6,7 +6,6 @@
     </view>
   </view>
   <view class="block1"></view>
-
   <!--导航条-->  
 
   <view class="navbar">  
@@ -14,17 +13,26 @@
   </view>  
 
   <!--今日课表-->
-
   <view class="container"hidden="{{currentTab!==0}}">
     <view class="module1">
       <view class="day_timeTable">
-      今日课表
+           <text>今日课表\n\n</text>
+      <scroll-view scroll-y style='height:250px;'>
+ 
+      <text style='font-size:32rpx;' >第3-5节\n10：00-12：25\n数据库系统原理（甲）-张红娟\n第7教研楼北310\n------------\n</text>
+      <text style='font-size:32rpx;' >第6-7节\n13：30-15：25\n大学生职业发展与就业指导-刘员\n第12教研楼北110\n------------\n</text>
+      <text style='font-size:32rpx;' >第8-10节\n15：30-18：25\n形式与政策（下）-张丹丹\n第12教研楼北100\n------------\n</text>
+      <text style='font-size:32rpx;' >第11-12节\n19：00-22：25\nLiunx系统开发 -刘谋\n第1教研楼南511\n------------\n</text>
+      </scroll-view>
+
       </view>
       <view class="line1"></view>
       <view class="nowClass">
-        <view class="lesson1">当前课程</view>
+        <view class="lesson1">当前课程\n</view>
+        <text style='font-size:32rpx;margin-left:10rpx;' >第6-7节\n13：30-15：25\n大学生职业发展与就业指导-刘员\n第12教研楼北110\n------------\n</text>
         <view class="line2"></view>
         <view class="lesson2">下节课程</view>
+        <text style='font-size:32rpx;margin-left:10rpx' >第8-10节\n15：30-18：25\n形式与政策（下）-张丹丹\n第12教研楼北100\n------------\n</text>
       </view>
     </view>
     <view class="module2">
@@ -36,6 +44,7 @@
       <image  class="click" src='../images/click.png'></image>
       </view>
       <view class="line3"></view>
+      <text style='font-size:33rpx;margin-left:10rpx;' >\t\t本周暂无考试哦 \(^o^)/</text>
     </view>
   </view>
 
@@ -43,14 +52,7 @@
 
   <view class="container2"hidden="{{currentTab!==1}}">
       <view class="block2"></view>
-  <view class="planVie">
-      <view class="tVie">
-      <text class="planTitle">学习进度</text>
-      </view>
-    </view>
-    <view class="canvasVie">
-        <canvas class="canvas" canvas-id="canvas1" ></canvas>
-    </view>
+
     <view class="botVideo" hidden="{{studyContiune}}" >
       <view class="closeVie">
         <image  class="closePic" src='../images/close.png' bindtap="delete"></image>
@@ -63,7 +65,7 @@
         <text class="smallTe">Java初识</text>
       </view>
       <view class="startVie">
-        <text class="bigTe">进入学习</text>
+        <text class="bigTe" bindtap='ToVideo' >进入学习</text>
       </view>
   
     </view>
@@ -74,20 +76,20 @@
       <view class="vi">
       <text class="BitTitle">详细计划</text>
       </view>
-      <image  class="moreP" src='../images/click.png'></image>
+      <image  style='margin-left:20rpx;'  class="moreP" src='../images/click.png'></image>
     </view>
     <view class="Plan">
       <view class="plandetail">
       <view class="stage1">
         <view class="stageTitle">
           <image class="Prog" src='../images/Nowscore.png' ></image>
-          <text class="title1">本阶段目标：</text>
+          <text class="title1">本阶段：</text>
           <text class="title2">Java初识</text>
         </view>
         <view class="line4"></view>
         <view class="stageTitle">
          <image class="Prog" src='../images/Progress graph.png' ></image>
-          <text class="title1" >目标进度：</text>
+          <text class="title1" >完成度：</text>
           <progress class="Myprogress" percent="{{PPrecent}}"  border-radius='100' show-info stroke-width="12"  />
         </view>
         <view class="line4"></view>
@@ -101,18 +103,73 @@
             <view class="typeB">
             <text class="taskDe">2:数据结构与算法分析...</text><image class="IfFin" src='../images/unFin.png' ></image>
             </view>
-            <view class="typeB">
+             <view class="typeB">
             <text class="taskDe">3:代码整洁之道</text><image class="IfFin" src='../images/unFin.png' ></image>
+            </view>
+            <view class="typeB">
+            <text class="taskDe">4:统计论习题</text><image class="IfFin" src='../images/unFin.png' ></image>
             </view>
           </view>
         </view>
       </view>
       </view>
     </view>
-    x
 
-    x
-   
+    <view class="planVie">
+      <view class="tVie">
+      <text class="planTitle">我的笔记</text>
+      </view>
+      <view class="vi">
+      <text class="BitTitle">添加笔记</text>
+      </view>
+      <image style='margin-left:20rpx;'  class="moreP" src='../images/addNote.png'></image>
+    </view>
+
+
+    <view class="bigVie">
+    <image style='height:60rpx;width:60rpx;' src='../images/dot1.png'></image>
+    <view style='border-top-color: #3b7ffa;border-bottom-color: #3b7ffa;border-left-color: #3b7ffa;box-shadow:0rpx 1rpx 6rpx  2rpx rgba(10, 48, 216, 0.658);' class='noteVie'>
+      <image class='notePic' src='../images/noteBook.png'></image>
+      <view class='notetextVie' >
+        <text class="noteContent" >Java的多态、封装和继承...</text>
+        <text class="time" >2019年3月01日</text>
+      </view>
+    </view>
+</view>
+
+        <view class="bigVie">
+        <image style='height:60rpx;width:60rpx;' src='../images/dot2.png'></image>
+        <view class='noteVie' style='border-top-color: #0e932e;border-bottom-color: #0e932e;border-left-color: #0e932e;box-shadow:0rpx 1rpx 6rpx  2rpx #0e932e;'>
+      <image class='notePic' src='../images/noteBook.png'></image>
+      <view class='notetextVie' >
+        <text class="noteContent" >GHfdhsoodfs dsfjia...</text>
+        <text class="time" >2019年3月01日</text>
+      </view>
+    </view>
+    </view>
+
+
+        <view class="bigVie">
+        <image style='height:60rpx;width:60rpx;' src='../images/dot3.png'></image>
+        <view class='noteVie' style='border-top-color: #d81e06;border-bottom-color: #d81e06;border-left-color: #d81e06;box-shadow:0rpx 1rpx 6rpx  2rpx #d81e06;'>
+      <image class='notePic' src='../images/noteBook.png'></image>
+      <view class='notetextVie' >
+        <text class="noteContent" >gfdsgJoifJLKIOIOjm...</text>
+        <text class="time" >2019年3月01日</text>
+      </view>
+    </view>
+</view>
+
+        <view class="bigVie">
+        <image style='height:60rpx;width:60rpx;' src='../images/dot4.png'></image>
+        <view class='noteVie' style='border-top-color: #f4ea2a;border-bottom-color: #f4ea2a;border-left-color: #f4ea2a;box-shadow:0rpx 1rpx 6rpx  2rpx #f4ea2a;'>
+      <image class='notePic' src='../images/noteBook.png'></image>
+      <view class='notetextVie' >
+        <text class="noteContent" >fdsfdfdsfsdff...</text>
+        <text class="time" >2019年3月01日</text>
+      </view>
+    </view>
+</view>
   </view>
 
 

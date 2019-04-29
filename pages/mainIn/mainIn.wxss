@@ -233,7 +233,7 @@
   margin-top: 20rpx;
 }
 .tVie{
-  width: 78%;
+  width: 73%;
 }
 .planTitle{
   font-size: 34rpx;
@@ -342,18 +342,24 @@
   flex-direction: row;
   height: 100%;
 }
+.stageTitle2{
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 .title1{
   margin-left: 14rpx;
-  font-size: 31rpx;
+  font-size: 36rpx;
 }
 .title2{
-  font-size: 30rpx;
+  font-size: 36rpx;
   text-decoration-line: underline;
   color: #3b7ffa;
 }
 .Prog{
-  width: 55rpx;
-  height: 55rpx;
+  width: 70rpx;
+  height: 70rpx;
 }
 .line4{
   background-color: rgb(195, 197, 204);
@@ -361,7 +367,7 @@
   height: 3rpx;
 }
 .Myprogress{
-  width: 66%;
+  width: 64%;
 }
 .toTask{
   width: 60%;
@@ -370,7 +376,7 @@
 }
 .taskDe{
   width: 90%;
-  font-size: 28rpx;
+  font-size: 32rpx;
   color: rgb(76, 76, 80);
   text-decoration-line: underline;
 }
@@ -384,24 +390,49 @@
   width: 40rpx;
   height: 40rpx
 }
-/*这是统计图*/
-.canvasVie{
-  border-style: solid;
-  border-width: 2rpx;
-  border-top-color: rgb(214, 215, 216);
-  border-bottom-color: rgb(214, 215, 216);
-  border-right-color: rgb(219, 220, 224);
-  border-left-color: rgb(219, 220, 224);
-  margin-top: 13rpx;
-  width: 100%;
-  padding: 0;
-  background-color:rgb(239, 240, 241);
+
+.noteVie{
+  margin-top: 40rpx;
+  margin-bottom: 20rpx;
+  border-top-left-radius: 100rpx;
+  border-bottom-left-radius: 100rpx;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  width: 93%;
+  height: 150rpx;
+  border-style: solid;
+  border-width: 4rpx;
+  border-right-color: rgb(230, 230, 233);
+  padding: 16rpx;
+  background-color: rgba(234, 234, 241, 0.199);
+   
+}
+.bigVie{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.notePic{
+  margin-left: 20rpx;
+  width: 25%;
+  height: 85%;
+}
+.notetextVie{
+  height: 100%;
+  width: 100%;
+  margin-left: 40rpx;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
-.canvas {
-     width: 360px;
-    height: 300px;
-
+.noteContent{
+  font-size: 34rpx;
+  color: rgba(3, 11, 36, 0.733);
+}
+.time{
+  font-size: 32rpx;
+  color: rgb(137, 138, 141);
+  margin-top: 40rpx;
 }

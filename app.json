@@ -1,16 +1,21 @@
 {
   "cloud":true,
   "pages":[
- 
-    "pages/question/question",
-      "pages/test/test",
+        "pages/Community/Community",
+          "pages/question/question",
+        "pages/mainIn/mainIn",
+
+
     "pages/load/load",
-    "pages/mainIn/mainIn",
+
+        "pages/test/test",
+
+    
     "pages/chatWindows/chatWindows",
     
     "pages/chat/chat",
    
-    "pages/Community/Community",
+
     "pages/Compass/Compass",
     "pages/myInfo/myInfo",
     "pages/index/index",

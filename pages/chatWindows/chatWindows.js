@@ -15,7 +15,7 @@ function initData(that) {
   msgList = [{
     speaker: 'server',
     contentType: 'text',
-    content: '这是右边的信息'
+    content: '这是回答的问题巴拉巴拉'
   },
   ]
   that.setData({
@@ -41,7 +41,8 @@ Page({
   data: {
     scrollHeight: ' ',
     inputBottom: 0,
-    name:''
+    name:'',
+    hideleft:true
   },
 
   /**
@@ -76,6 +77,11 @@ Page({
         console.log(that.data.currentMsg[0])
       }
     })
+   setTimeout(function () {
+      that.setData({
+        hideleft:false
+      })
+    }, 13000)
   },
 
   /**

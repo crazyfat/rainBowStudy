@@ -33,32 +33,11 @@ Page({
     })
   },
   onLoad:function(){
-    new Charts({
-      canvasId: 'canvas1',
-      background:'#000',
-      type: 'pie',
-      title:'ssxxxxs',
-      
-      series: [{
-        name: 'cat1',
-        data: 50,
-      }, {
-        name: 'cat2',
-        data: 30,
-      }, {
-        name: 'cat3',
-        data: 1,
-      }, {
-        name: 'cat4',
-        data: 1,
-      }, {
-        name: 'cat5',
-        data: 46,
-      }],
-      width: 360,
-      height: 300,
-      dataLabel: true
-    });
-    
+   
+  },
+  ToVideo:function(){
+    wx.navigateTo({
+      url: '../test/test'
+    })
   }
 })

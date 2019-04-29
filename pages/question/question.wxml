@@ -1,6 +1,5 @@
 <!--pages/question/quertion.wxml-->
 <view class="container">
-  <text class="last" bindtap="tabreduce" hidden='{{hideLast}}'>上一步</text>
   <text class="next" bindtap="tabadd" hidden='{{hidenext}}'>下一步</text>
   <view class="mainContian">
   <view class="page" hidden="{{Tab!==0}}">
@@ -29,9 +28,16 @@
     </view>
   </view>
   
+  <!--page2-->
+ <view class="page1" hidden="{{Tab!==1}}">
+    <view class="processVie">
+    <text class="status" >{{status3}}</text>
+    <progress class="Myprogress" percent="100"  border-radius='100' stroke-width="16" activeColor='#ff590b ' active-mode='forwards' active='{{begin3}}' />
+    </view>
+ </view>
 
-<!--page2-->
-<view class="page" hidden="{{Tab!==1}}">
+<!--page3-->
+<view class="page" hidden="{{Tab!==2}}">
     <view class="titleQuesList">
       <view class="frame">
         <image class='ques' src='../images/ques.png' ></image>
@@ -67,8 +73,8 @@
   </view>
 
 
-  <!--page3-->
- <view class="page" hidden="{{Tab!==2}}">
+  <!--page4-->
+ <view class="page" hidden="{{Tab!==3}}">
     <view class="titleQuesList">
         <view class="frame">
           <image class='ques' src='../images/ques.png' ></image>
@@ -104,8 +110,8 @@
   </view>
   
 
-  <!--page4-->
- <view class="page" hidden="{{Tab!==3}}">
+  <!--page5-->
+ <view class="page" hidden="{{Tab!==4}}">
     <view class="titleQuesList">
         <view class="frame">
         <image class='ques' src='../images/ques.png' ></image>
@@ -140,8 +146,8 @@
     
   </view>
   
-<!--page5-->
- <view class="page1" hidden="{{Tab!==4}}">
+<!--page6-->
+ <view class="page1" hidden="{{Tab!==5}}">
     <view class="processVie">
     <text class="status" >{{status}}</text>
     <progress class="Myprogress" percent="100"  border-radius='100' stroke-width="16" activeColor='#A0EEE1' active-mode='forwards' active='{{begin}}' />
@@ -150,8 +156,8 @@
  
 
 
- <!--page6-->
-<view class="page1" hidden="{{Tab!==5}}">
+ <!--page7-->
+<view class="page1" hidden="{{Tab!==6}}">
     <view class="titleQues">
       <image class='ques' src='../images/ques.png' ></image>
       <text class="titleTe">你对以下哪些领域感兴趣？</text>
@@ -166,8 +172,8 @@
  
 
 
- <!--page7-->
-<view class="page1" hidden="{{Tab!==6}}">
+ <!--page8-->
+<view class="page1" hidden="{{Tab!==7}}">
     <view class="titleQues">
       <image class='ques' src='../images/ques.png' ></image>
       <text class="titleTe">你掌握或了解以下哪些技术？</text>
@@ -180,8 +186,8 @@
 </view>
 
 
-<!--page8-->
- <view class="page1" hidden="{{Tab!==7}}">
+<!--page9-->
+ <view class="page1" hidden="{{Tab!==8}}">
     <view class="processVie">
     <text class="status" >{{status2}}</text>
     <progress class="Myprogress" percent="100"  border-radius='100' stroke-width="16" activeColor='#ECAD9E ' active-mode='forwards' active='{{begin2}}' />
@@ -190,8 +196,8 @@
 
 
 
-<!--page9-->
- <view class="lastPage" hidden="{{Tab!==8}}">
+<!--page10-->
+ <view class="lastPage" hidden="{{Tab!==9}}">
     <button class="but" bindtap="OKto" >完成</button>
     <view class="topVie">
       <view class="PicTop">
@@ -214,7 +220,13 @@
               <canvas class="canvas" canvas-id="canvas1" ></canvas>
            </view>
         </view>
+        
       <!--习得-->
+        <view class="get">
+          <text class="getTitle">目标进度：</text>
+          <progress percent="{{PPrecent}}"  border-radius='100' show-info stroke-width="12" />
+        </view>
+        <view style='height:40rpx'></view>
         <view class="get">
           <text class="getTitle">已修：</text>
           <view class="getJob">
@@ -270,11 +282,7 @@
           <text class="getTitle">目标：</text>
           <text class="list2">Java工程师</text>
         </view>
-        <view style='height:40rpx'></view>
-        <view class="get">
-          <text class="getTitle">目标进度：</text>
-          <progress percent="{{PPrecent}}"  border-radius='100' show-info stroke-width="12" />
-        </view>
+
       <!--当前阶段-->
         <view style='height:40rpx'></view>
         <view class="get">
@@ -286,10 +294,16 @@
         <view style='height:40rpx'></view>
         <view class="get">
           <text class="getTitle">现阶段为您推荐课程：</text>
-          <text class="list3">王老师疯狂Java  ——王绍平</text>
-          <text class="list3">算法分析导论  ——侯得纲</text>
-          <text class="list3">代码整洁之道  ——林强</text>
-          <text class="list3">...</text>
+    <view wx:for="{{Videoarray}}" wx:key='key' wx:for-index="key">
+    <view class='videpList'>
+      <image class="videoPics" src='{{videoImages[key]}}' ></image>
+      <view class="videotext" >
+        <text class='videoname'>{{Videoarray[key].name}}</text>
+        <text class='videoTip'>{{Videoarray[key].title}}</text>
+        <text class='videoTeacher'>{{Videoarray[key].teacher}}</text>
+      </view>
+    </view>
+    </view>
         </view>
   
 

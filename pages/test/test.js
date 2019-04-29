@@ -1,74 +1,70 @@
-//index.js
-//获取应用实例
-const app = getApp()
-var isFirst = true;
-var isSiFirst = true;
+function getRandomColor() {
+  let rgb = []
+  for (let i = 0; i < 3; ++i) {
+    let color = Math.floor(Math.random() * 256).toString(16)
+    color = color.length == 1 ? '0' + color : color
+    rgb.push(color)
+  }
+  return '#' + rgb.join('')
+}
+
 Page({
+  onReady: function (res) {
+    this.videoContext = wx.createVideoContext('myVideo')
+  },
+  inputValue: '',
   data: {
-    percent: "90",
-    sw: 6,
-    pc: '#00ff00',
-    pbc: '#cccccc',
-    isActive: true,
-    isSi: true,
-  },
-
-  onLoad: function () {
-
-  },
-  //进度条输入事件
-  progressInput: function (e) {
-    this.setData({
-      percent: e.detail.value
-    })
-  },
-  //设置宽度事件
-  swInput: function (e) {
-    this.setData({
-      sw: e.detail.value
-    })
-  },
-  //设置进度条颜色事件
-  pcInput: function (e) {
-    this.setData({
-      pc: e.detail.value
-    })
-  },
-  //未选择的进度条的颜色事件
-  pbcInput: function (e) {
-    this.setData({
-      pbc: e.detail.value
-    })
-  },
-  //设置进度条从左往右的动画
-  bindButton: function (e) {
-    console.log(isFirst);
-    if (isFirst == true) {
-      isFirst = false;
-      this.setData({
-        isActive: false,
-      })
-    } else {
-      isFirst = true;
-      this.setData({
-        isActive: true,
-      })
-    }
-  },
-  //设置进度条右侧显示百分比
-  bindButton1: function (e) {
-    if (isSiFirst == true) {
-      isSiFirst = false;
-      this.setData({
-        isSi: false,
-      })
-
-    } else {
-      isSiFirst = true;
-      this.setData({
-        isSi: true,
-      })
-    }
+    src: '',
+    danmuList:
+      [
+        {
+          text: '谢谢老师讲得真好',
+          color: '#ff0000',
+          time: 1
+        },
+        {
+          text: '受益良多感谢彩虹学堂',
+          color: '#ff00ff',
+          time: 3
+        }
+      ]
 
   },
+  bindInputBlur: function (e) {
+    this.inputValue = e.detail.value
+  },
+  bindButtonTap: function () {  //视频下载
+    var that = this
+    wx.chooseVideo({
+      sourceType: ['album', 'camera'],
+      maxDuration: 60,
+      camera: ['front', 'back'],
+      success: function (res) {
+        that.setData({
+          src: res.tempFilePath
+        })
+      }
+    })
+  },
+  bindSendDanmu: function () {
+    this.videoContext.sendDanmu({
+      text: this.inputValue,
+      color: getRandomColor()
+    })
+  },
+  videoErrorCallback: function (e) {
+    console.log('视频错误信息:');
+    console.log(e.detail.errMsg);
+  },
+  return: function () {
+    wx.navigateBack({})
+  },
+  mySave:function(){
+    wx.showToast({
+      title: '记录成功',
+      icon:'success',
+      duration:2000
+      
+    })
+  }
 })

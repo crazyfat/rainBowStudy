@@ -385,3 +385,35 @@
   width: 40rpx;
   height: 40rpx
 }
+.videpList{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+}
+.videoPics{
+  width: 300rpx;
+  height: 200rpx;
+}
+.videotext{
+  padding: 10rpx;
+  height: 200rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.videoname{
+  height: 60rpx;
+}
+.videoTip{
+  height: 80rpx;
+  font-size: 26rpx;
+  color: rgb(100, 98, 98);
+}
+.videoTeacher{
+  margin-top: 50rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  color: rgb(65, 63, 63);
+}

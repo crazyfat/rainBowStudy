@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    Videoarray: [{ name: '王老师疯狂Java（上）', title: 'java教程、初级实践', teacher:'王成恩'},
+      { name: '王老师疯狂Java（中）', title: 'java教程、初级实践', teacher: '王成恩'},
+      { name: '王老师疯狂Java（下）', title: 'java教程、初级实践', teacher: '王成恩'}]
   },
 
   /**
