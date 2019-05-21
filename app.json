@@ -1,26 +1,21 @@
 {
-  "cloud":true,
-  "pages":[
-        "pages/Community/Community",
-          "pages/question/question",
-        "pages/mainIn/mainIn",
+  "cloud": true,
+  "pages": [
+    "pages/portrait/portrait",
+    "pages/question/question",
+    "pages/mainIn/mainIn",
+        "pages/chatWindows/chatWindows",
 
-
+    "pages/trueTest/trueTest",
+    "pages/Community/Community",
     "pages/load/load",
-
-        "pages/test/test",
-
-    
-    "pages/chatWindows/chatWindows",
-    
+    "pages/test/test",
     "pages/chat/chat",
-   
-
     "pages/Compass/Compass",
     "pages/myInfo/myInfo",
     "pages/index/index",
-    "pages/videos/videos",
-    "pages/logs/logs"
+    "pages/videos/videos" 
+    
   ],
   "window": {
     "navigationStyle": "custom",
@@ -57,5 +52,6 @@
         "selectedIconPath": "pages/images/myInfoBlue.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

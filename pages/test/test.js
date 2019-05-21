@@ -14,6 +14,7 @@ Page({
   },
   inputValue: '',
   data: {
+    courseCount:['','','','','','','',''],
     src: '',
     danmuList:
       [

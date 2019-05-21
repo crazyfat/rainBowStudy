@@ -10,13 +10,13 @@
 <view class="Phoneview">
 <image  class="smallPhone" src='../images/sp.png'></image>
 <view class="Numberview">
-<text class="phoneNumber">15968310802</text>
+<text class="phoneNumber">{{myInfo[0].phone}}</text>
 </view>
 </view>
 <view class="Titleview">
 <image  class="smallface" src='../images/face.png'></image>
 <view class="title">
-<text class="titleText">每天进步一点点。</text>
+<text class="titleText">{{myInfo[0].tip}}</text>
 </view>
 <image  class="modify" src='../images/Modify.png'></image>
 </view>

@@ -33,7 +33,7 @@ Page({
       complete: res => {
         wx.setStorage({
           key: 'openId',
-          data: res.result.openId,
+          data: res.result.openid,
         })
       }
     })

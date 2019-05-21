@@ -14,9 +14,9 @@
   <view class="container2">
     <view class="wheel">
       <swiper class="swiper_wheel" indicator-dots='true' autoplay='true' interval='2000' >
-        <swiper-item><image class="swiperImage" src='../Eximages/study1.png'></image></swiper-item>
-        <swiper-item><image class="swiperImage" src='../Eximages/study2.png'></image></swiper-item>
-        <swiper-item><image class="swiperImage" src='../Eximages/study3.png'></image></swiper-item>
+        <swiper-item><image class="swiperImage" src='{{Pic[0].image}}'></image></swiper-item>
+        <swiper-item><image class="swiperImage" src='{{Pic[1].image}}'></image></swiper-item>
+        <swiper-item><image class="swiperImage" src='{{Pic[2].image}}'></image></swiper-item>
       </swiper>
     </view>
     <view class="jobs">

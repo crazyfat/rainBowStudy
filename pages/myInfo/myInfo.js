@@ -16,14 +16,14 @@ Page({
     wx.cloud.init()
     const db = wx.cloud.database();
     db.collection('user').where({
-      _openid: wx.getStorageSync('openId'),
+      _openid: "wx.getStorageSync('openId')",
     }).get({
       success: function (res) {
         // res.data 包含该记录的数据
         that.setData({
           myInfo: res.data
         })
-        console.log(that.data.myInfo[0])
+        console.log(that.data.myInfo)
       }
     })
   },

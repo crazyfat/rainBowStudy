@@ -1,15 +1,17 @@
 <!--pages/question/quertion.wxml-->
 <view class="container">
+
   <text class="next" bindtap="tabadd" hidden='{{hidenext}}'>下一步</text>
+
   <view class="mainContian">
   <view class="page" hidden="{{Tab!==0}}">
     <view class="inputVie">
       <text class="info">姓名:</text>
-      <input class="inputType"></input>
+      <input class="inputType" bindinput="inputname"></input>
     </view>
     <view class="inputVie">
       <text class="info">学号:</text>
-      <input class="inputType" type="digit" maxlength='8'></input>
+      <input class="inputType" type="digit" maxlength='8' bindinput="inputuid"></input>
     </view>
     <view class="inputVie">
       <text class="info">专业:</text>
@@ -20,12 +22,15 @@
     </view>
     <view class="inputVie">
       <text class="job">目标职业:</text>
-      <input class="inputType"></input>
+      <input class="inputType" bindinput="inputoccup"></input>
     </view>
     <view class="inputVie">
       <text class="job">目标企业:</text>
       <input class="inputType" placeholder='选填'></input>
     </view>
+      <button disabled='{{substatus}}' class="add-info" animation="{{slide_up1}}" bindtap="tapSub" >     <text hidden='{{hideFlag}}' >{{subTe}}</text>
+      <image hidden='{{!hideFlag}}' class="subima" animation="{{animationData}}" src='{{subima}}' ></image>
+      </button>
   </view>
   
   <!--page2-->
@@ -198,7 +203,7 @@
 
 <!--page10-->
  <view class="lastPage" hidden="{{Tab!==9}}">
-    <button class="but" bindtap="OKto" >完成</button>
+    <button class="but" bindtap="OKto">完成</button>
     <view class="topVie">
       <view class="PicTop">
         <image class="userPic" src='../userImages/user.png'></image>
@@ -220,9 +225,17 @@
               <canvas class="canvas" canvas-id="canvas1" ></canvas>
            </view>
         </view>
+      <view style='margin-top:50rpx;' class="get">
+          <text class="getTitle">能力分析：</text>
+          <view class="canvasVie">
+              <canvas class="radar"  disable-scroll="true" canvas-id="rader" ></canvas>
+           </view>
+      </view>
+         
+
         
       <!--习得-->
-        <view class="get">
+        <view style='margin-top:40rpx;' class="get">
           <text class="getTitle">目标进度：</text>
           <progress percent="{{PPrecent}}"  border-radius='100' show-info stroke-width="12" />
         </view>
@@ -287,7 +300,7 @@
         <view style='height:40rpx'></view>
         <view class="get">
           <text class="getTitle">当前阶段：</text>
-          <text class="list2">Java初始</text>
+          <text class="list2">Java初识</text>
         </view>
 
       <!--推荐学习-->

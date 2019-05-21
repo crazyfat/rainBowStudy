@@ -15,7 +15,7 @@ function initData(that) {
   msgList = [{
     speaker: 'server',
     contentType: 'text',
-    content: '这是回答的问题巴拉巴拉'
+    content: '我是你的智能小老师，有问题赶紧来问吧。'
   },
   ]
   that.setData({
@@ -41,8 +41,8 @@ Page({
   data: {
     scrollHeight: ' ',
     inputBottom: 0,
-    name:'',
-    hideleft:true
+    name: '',
+    hideleft: true
   },
 
   /**
@@ -77,11 +77,6 @@ Page({
         console.log(that.data.currentMsg[0])
       }
     })
-   setTimeout(function () {
-      that.setData({
-        hideleft:false
-      })
-    }, 13000)
   },
 
   /**
@@ -142,6 +137,11 @@ Page({
       speaker: 'customer',
       contentType: 'text',
       content: e.detail.value
+    })
+    msgList.push({
+      speaker: 'server',
+      contentType: 'text',
+      content: "Java继承特性：1.子类拥有父类非private的属性，方法。2.子类可以拥有自己的属性和方法，即子类可以对父类进行扩展。3.子类可以用自己的方式实现父类的方法。"
     })
     inputVal = '';
     this.setData({

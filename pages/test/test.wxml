@@ -9,7 +9,7 @@
   <view class='topBlock'>
     <image class='return' src='../images/return.png' bindtap='return'></image>
     </view>
-  <video class="Avideo" id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" initial-time='90'  binderror="videoErrorCallback" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+  <video class="Avideo" id="myVideo" src="http://vdse.bdstatic.com//bcb3a292ad405826f22033006974d022?authorization=bce-auth-v1/fb297a5cc0fb434c971b8fa103e8dd7b/2017-05-11T09:02:31Z/-1//af917d90cf6fbcbca5e45571b3673146a1e8c3df42e7172c42aed671d4d54e0c" initial-time='90'  binderror="videoErrorCallback" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
     <view class="nameVie">
     <text style='width:94%' >王老师疯狂Java</text>
     <image style='height:40rpx;width:40rpx' src='../images/share.png' ></image>
@@ -25,6 +25,11 @@
     </view>
     <text style='font-size:32rpx;margin-left:30rpx;'>课程简介</text>
     <textarea class="course" disabled='true' >Java是由Sun Microsystems公司于1995年5月推出的高级程序设计语言。Java可运行于多个平台，如Windows, Mac OS，及其他多种UNIX版本的系统。本教程通过简单的实例将让大家更好的了解JAVA编程语言。</textarea>
+    <view style="width:100%">
+    <scroll-view  class="chooseSeries" scroll-x style="width:auto;overflow:hidden;">
+      <view wx:for="{{courseCount}}" data-idx="{{index}}" class="series">{{index}}</view>
+    </scroll-view>
+    </view>
     <image style='width:40rpx;height:40rpx;margin-top:30rpx;margin-left:78%' src='../images/like.png' ></image>
     <image bindtap="bindButtonTap" style='width:40rpx;height:40rpx;margin-left:30rpx;margin-top:30rpx;' src='../images/downLoad.png' ></image>
     <view style='height:30rpx;'></view>

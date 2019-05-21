@@ -6,6 +6,10 @@
     </view>
   </view>
   <view class="block1"></view>
+  <view class="mission" hidden='{{!hideFloat}}' >
+
+  </view>
+  
   <!--导航条-->  
 
   <view class="navbar">  
@@ -14,38 +18,90 @@
 
   <!--今日课表-->
   <view class="container"hidden="{{currentTab!==0}}">
-    <view class="module1">
-      <view class="day_timeTable">
-           <text>今日课表\n\n</text>
-      <scroll-view scroll-y style='height:250px;'>
- 
-      <text style='font-size:32rpx;' >第3-5节\n10：00-12：25\n数据库系统原理（甲）-张红娟\n第7教研楼北310\n------------\n</text>
-      <text style='font-size:32rpx;' >第6-7节\n13：30-15：25\n大学生职业发展与就业指导-刘员\n第12教研楼北110\n------------\n</text>
-      <text style='font-size:32rpx;' >第8-10节\n15：30-18：25\n形式与政策（下）-张丹丹\n第12教研楼北100\n------------\n</text>
-      <text style='font-size:32rpx;' >第11-12节\n19：00-22：25\nLiunx系统开发 -刘谋\n第1教研楼南511\n------------\n</text>
-      </scroll-view>
-
-      </view>
-      <view class="line1"></view>
-      <view class="nowClass">
-        <view class="lesson1">当前课程\n</view>
-        <text style='font-size:32rpx;margin-left:10rpx;' >第6-7节\n13：30-15：25\n大学生职业发展与就业指导-刘员\n第12教研楼北110\n------------\n</text>
-        <view class="line2"></view>
-        <view class="lesson2">下节课程</view>
-        <text style='font-size:32rpx;margin-left:10rpx' >第8-10节\n15：30-18：25\n形式与政策（下）-张丹丹\n第12教研楼北100\n------------\n</text>
-      </view>
-    </view>
+   
     <view class="module2">
       <view class="exTitle">
       <view class="exHead">
-        <image class="exPic" src='../images/Examination.png' ></image>
-        <text class="exText">考试安排</text>
+        <image class="exPic" src='../images/classTable.png' ></image>
+        <text style='color:#1db742' class="exText">今日课表</text>
       </view>
       <image  class="click" src='../images/click.png'></image>
       </view>
-      <view class="line3"></view>
-      <text style='font-size:33rpx;margin-left:10rpx;' >\t\t本周暂无考试哦 \(^o^)/</text>
+
+      <view class="courseVie">
+        <text class="wobuzhidaojiaoshenmeha_01" >3-5</text>
+        <view class="wobuzhidaojiaoshenmeha_02">
+          <text style='font-size:34rpx;color:rgb(79, 79, 79)' >计算机组成原理(甲)</text>
+          <text style='font-size:28rpx;color:rgb(79, 79, 79);margin-top:15rpx;' >第7教研楼220</text>
+        </view>
+        <view class="wobuzhidaojiaoshenmeha_03">
+          <text style='font-size:30rpx;color:rgb(79, 79, 79)' >10:00 - 12:25</text>
+          <text style='font-size:30rpx;color:rgb(79, 79, 79);margin-top:15rpx;' >赵一</text>
+        </view>
+      </view>
+
+            <view class="courseVie">
+        <text class="wobuzhidaojiaoshenmeha_01" >6-8</text>
+        <view class="wobuzhidaojiaoshenmeha_02">
+          <text style='font-size:34rpx;color:rgb(79, 79, 79)' >计算机组成原理(甲)</text>
+          <text style='font-size:28rpx;color:rgb(79, 79, 79);margin-top:15rpx;' >第6教研楼312</text>
+        </view>
+        <view class="wobuzhidaojiaoshenmeha_03">
+          <text style='font-size:30rpx;color:rgb(79, 79, 79)' >13:30 - 16:00</text>
+          <text style='font-size:30rpx;color:rgb(79, 79, 79);margin-top:15rpx;' >黄为二</text>
+        </view>
+      </view>
+
+            <view class="courseVie">
+        <text class="wobuzhidaojiaoshenmeha_01" >10-12</text>
+        <view class="wobuzhidaojiaoshenmeha_02">
+          <text style='font-size:34rpx;color:rgb(79, 79, 79)' >Linux系统及应用</text>
+          <text style='font-size:28rpx;color:rgb(79, 79, 79);margin-top:15rpx;' >第12教研楼108</text>
+        </view>
+        <view class="wobuzhidaojiaoshenmeha_03">
+          <text style='font-size:30rpx;color:rgb(79, 79, 79)' >18:30 - 20:55</text>
+          <text style='font-size:30rpx;color:rgb(79, 79, 79);margin-top:15rpx;' >周立三</text>
+        </view>
+      </view>
+
+
     </view>
+  <!--阳光长跑-->
+        <view class="module2">
+      <view class="exTitle">
+      <view class="exHead">
+        <image class="exPic" src='../images/miaobiao.png' ></image>
+        <text style='color:#1195db' class="exText">阳光长跑</text>
+      </view>
+      <image  class="click" src='../images/click.png'></image>
+      </view>
+      <view style='display:flex;flex-direction:row'>
+      <view style='width:40%;display:flex;flex-direction: column;justify-content:center;align-content: center;'>
+        <text style='text-align:center;margin-top:30rpx;font-size:30rpx;color:rgb(79, 79, 79);' >跑步次数</text>
+        <text style='text-align:center;margin-top:20rpx;font-size:36rpx;color:rgb(79, 79, 79);font-weight: bolder' >36次</text>
+      </view>
+      <view style='width:50%;display:flex;flex-direction: column;justify-content:center;align-content: center;'>
+        <text style='text-align:right;margin-top:30rpx;font-size:30rpx;color:rgb(79, 79, 79);' >上次跑步速度</text>
+        <text style='text-align:right;center;margin-top:20rpx;font-size:33rpx;color:rgb(79, 79, 79);font-weight: bolder' >2.22m/s</text>
+      </view>
+      </view>
+      </view>
+
+       <!--卡内余额-->
+        <view class="module2">
+      <view class="exTitle">
+      <view class="exHead">
+        <image class="exPic" src='../images/card.png' ></image>
+        <text style='color:#ea9518' class="exText">校园一卡通</text>
+      </view>
+      <image  class="click" src='../images/click.png'></image>
+      </view>
+      <view style='display:flex;flex-direction:row'>
+        <text style='margin-bottom:40rpx;width:30%;text-align:center;margin-top:40rpx;font-size:36rpx;color:rgb(79, 79, 79);' >卡内余额</text>
+        <text style='margin-bottom:40rpx;width:58%;text-align:right;margin-top:40rpx;font-size:44rpx;color:rgb(79, 79, 79);font-weight: bolder'>99.6</text>
+        <text style='margin-left:6rpx;margin-top:50rpx;font-size:30rpx;color:rgb(79, 79, 79)' >元</text>
+      </view>
+      </view>
   </view>
 
   <!--彩虹学堂-->
@@ -58,57 +114,42 @@
         <image  class="closePic" src='../images/close.png' bindtap="delete"></image>
       </view>
       <view class="vieoVie">
-        <image  class="videoPic" src='../Eximages/java.jpg'></image>
+        <image  class="videoPic" src='{{classInfo[0].image}}'></image>
       </view>
       <view class="className">
-        <text class="bigTe">王老师疯狂Java</text>
-        <text class="smallTe">Java初识</text>
+        <text class="bigTe">{{classInfo[0].name}}</text>
+        <text class="smallTe">{{pageInfo[0].stage}}</text>
       </view>
       <view class="startVie">
         <text class="bigTe" bindtap='ToVideo' >进入学习</text>
       </view>
   
     </view>
-    <view class="planVie">
-      <view class="tVie">
-      <text class="planTitle">我的学习</text>
-      </view>
-      <view class="vi">
-      <text class="BitTitle">详细计划</text>
-      </view>
-      <image  style='margin-left:20rpx;'  class="moreP" src='../images/click.png'></image>
-    </view>
+           <view class="canvasVie">
+              <canvas class="canvas"  disable-scroll="true" canvas-id="lineCanvas" ></canvas>
+           </view>
+    
     <view class="Plan">
       <view class="plandetail">
       <view class="stage1">
         <view class="stageTitle">
-          <image class="Prog" src='../images/Nowscore.png' ></image>
+          <image class="Prog" src='../images/Nowstage.png' ></image>
           <text class="title1">本阶段：</text>
-          <text class="title2">Java初识</text>
+          <text class="title2">{{pageInfo[0].stage}}</text>
         </view>
         <view class="line4"></view>
         <view class="stageTitle">
          <image class="Prog" src='../images/Progress graph.png' ></image>
           <text class="title1" >完成度：</text>
-          <progress class="Myprogress" percent="{{PPrecent}}"  border-radius='100' show-info stroke-width="12"  />
+          <progress class="Myprogress" percent="{{pageInfo[0].finishP}}"  border-radius='100' show-info stroke-width="12"  />
         </view>
         <view class="line4"></view>
         <view class="stageTitle">
-         <image class="Prog" src='../images/task.png' ></image>
-          <text class="title1">今日任务：</text>
+         <image class="Prog" src='../images/fire.png' ></image>
+          <text class="title1">活跃度：</text>
           <view class="toTask">
-            <view class="typeB">
-            <text class="taskDe">1:王老师疯狂Java</text><image class="IfFin" src='../images/Fin.png' ></image>
-            </view>
-            <view class="typeB">
-            <text class="taskDe">2:数据结构与算法分析...</text><image class="IfFin" src='../images/unFin.png' ></image>
-            </view>
-             <view class="typeB">
-            <text class="taskDe">3:代码整洁之道</text><image class="IfFin" src='../images/unFin.png' ></image>
-            </view>
-            <view class="typeB">
-            <text class="taskDe">4:统计论习题</text><image class="IfFin" src='../images/unFin.png' ></image>
-            </view>
+            <text class="taskDe">{{pageInfo[0].fireP}}</text><image class="IfFin" src='../images/sad.png' ></image>
+            
           </view>
         </view>
       </view>
@@ -117,59 +158,34 @@
 
     <view class="planVie">
       <view class="tVie">
-      <text class="planTitle">我的笔记</text>
+      <text class="planTitle">我的课程</text>
       </view>
       <view class="vi">
-      <text class="BitTitle">添加笔记</text>
+      <text class="BitTitle">全部</text>
       </view>
-      <image style='margin-left:20rpx;'  class="moreP" src='../images/addNote.png'></image>
+      <image style='margin-left:10rpx;'  class="moreP" src='../images/click.png'></image>
     </view>
 
-
-    <view class="bigVie">
-    <image style='height:60rpx;width:60rpx;' src='../images/dot1.png'></image>
-    <view style='border-top-color: #3b7ffa;border-bottom-color: #3b7ffa;border-left-color: #3b7ffa;box-shadow:0rpx 1rpx 6rpx  2rpx rgba(10, 48, 216, 0.658);' class='noteVie'>
-      <image class='notePic' src='../images/noteBook.png'></image>
-      <view class='notetextVie' >
-        <text class="noteContent" >Java的多态、封装和继承...</text>
-        <text class="time" >2019年3月01日</text>
+    <!--我的课程-->
+    <view  wx:for="{{classInfo}}" data-idx="{{index}}">
+    <view class="myCourse">
+      <view class="leftTitle">
+        <text class="course">{{classInfo[index].name}}</text>
+        <text class="precent" >已学{{classInfo[index].precent}}%</text>
+        <progress percent="{{classInfo[index].precent}}"  border-radius='100'stroke-width="4"  />
       </view>
+      <image class="courseIma" src='{{classInfo[index].image}}' ></image>
     </view>
-</view>
-
-        <view class="bigVie">
-        <image style='height:60rpx;width:60rpx;' src='../images/dot2.png'></image>
-        <view class='noteVie' style='border-top-color: #0e932e;border-bottom-color: #0e932e;border-left-color: #0e932e;box-shadow:0rpx 1rpx 6rpx  2rpx #0e932e;'>
-      <image class='notePic' src='../images/noteBook.png'></image>
-      <view class='notetextVie' >
-        <text class="noteContent" >GHfdhsoodfs dsfjia...</text>
-        <text class="time" >2019年3月01日</text>
-      </view>
     </view>
+      <view style="height30rpx;"></view>
+    <view class="nextStage">
+      <image class="nextStageIma" src='../images/down.png' ></image>
+    </view>
+      <view style="height20rpx;"></view>
+    <view class="nextStage">
+    <text class="nextStageTe" >下一阶段：{{pageInfo[0].nextStage}}</text>
     </view>
 
-
-        <view class="bigVie">
-        <image style='height:60rpx;width:60rpx;' src='../images/dot3.png'></image>
-        <view class='noteVie' style='border-top-color: #d81e06;border-bottom-color: #d81e06;border-left-color: #d81e06;box-shadow:0rpx 1rpx 6rpx  2rpx #d81e06;'>
-      <image class='notePic' src='../images/noteBook.png'></image>
-      <view class='notetextVie' >
-        <text class="noteContent" >gfdsgJoifJLKIOIOjm...</text>
-        <text class="time" >2019年3月01日</text>
-      </view>
-    </view>
-</view>
-
-        <view class="bigVie">
-        <image style='height:60rpx;width:60rpx;' src='../images/dot4.png'></image>
-        <view class='noteVie' style='border-top-color: #f4ea2a;border-bottom-color: #f4ea2a;border-left-color: #f4ea2a;box-shadow:0rpx 1rpx 6rpx  2rpx #f4ea2a;'>
-      <image class='notePic' src='../images/noteBook.png'></image>
-      <view class='notetextVie' >
-        <text class="noteContent" >fdsfdfdsfsdff...</text>
-        <text class="time" >2019年3月01日</text>
-      </view>
-    </view>
-</view>
   </view>
 
 

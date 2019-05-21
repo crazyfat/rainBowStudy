@@ -5,7 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo:['张元庆','大二','19','计算机','网易Java工程师'],
+    hideFlag:false,
+    rotateIndex:'',
+    animation:{},
+    substatus:true,
+    name:'',
+    uid:'',
+    major:'',
+    occup:'',
+    subima:'../images/whiteload.png',
+    subTe:'提交',
+    userInfo:['张彩虹','大二','19','计算机','网易Java工程师'],
     Videoarray: [{ name: '王老师疯狂Java（上）', title: 'java教程、初级实践', teacher: '王成恩' },
       { name: '算法导论', title: '计算机算法、网络', teacher: '金立斌' },
     { name: '代码整洁之道', title: '代码质量、程序维护', teacher: '林丽' }],
@@ -23,7 +33,7 @@ Page({
     fontColor: '#1b1919af',
     hideTip:false,
     fontColor:'#fff',
-    Tab:0,
+    Tab:9,
     begin:false,
     begin2:false,
     begin3: false,
@@ -54,7 +64,7 @@ Page({
       { name: "Linux", value: '5', checked: false },
       { name: "微服务架构", value: '6', checked: false },
     ],
-    hidenext:false,
+    hidenext:true,
     bottom: ['140', '170', '360', '400', '380', '580', '560'],
     right: ['160', '400', '110', '280', '480', '160', '420'],
     // 自定义自己喜欢的颜色
@@ -111,6 +121,56 @@ Page({
       ]
     ],
     multiIndex: [],
+  },
+  judge:function(){
+    var that=this
+    if (that.data.name != '' && that.data.uid != '' && that.data.occup != '' && that.data.multiIndex != '' )
+    that.showSub();
+  },
+  showSub:function(){
+    this.app = getApp();
+    this.app.show(this, 'slide_up1',1 )
+    this.setData({
+      substatus:false
+    })
+
+  },
+  tapSub:function(){
+    this.setData({
+      hideFlag:true
+    })
+    // 创建动画
+    var animation = wx.createAnimation({
+      duration: 200,
+      timingFunction: 'ease'
+    })
+    this.animation = animation
+    // 图片旋转
+    this.imageRotators()
+  },
+  //get name
+  inputname: function (e) {
+
+    this.setData({
+      name: e.detail.value
+    })
+    this.judge();
+  },
+  //get uid
+  inputuid: function (e) {
+
+    this.setData({
+      uid: e.detail.value
+    })
+    this.judge();
+  },
+  //get name
+  inputoccup: function (e) {
+
+    this.setData({
+      occup: e.detail.value
+    })
+    this.judge();
   },
   reChoose:function(){
     var that=this
@@ -271,6 +331,7 @@ Page({
     this.setData({
       multiIndex: e.detail.value
     })
+    this.judge();
   },
   bindMultiPickerColumnChange: function (e) {
     // console.log('修改的列为', e.detail.column, '，值为', e.detail.value);
@@ -325,6 +386,39 @@ Page({
       randomColorArr: newColorArr,
       height: newheight
     });
+    var windowWidth = '', windowHeight = '';    //定义宽高
+    try {
+      var res = wx.getSystemInfoSync();    //试图获取屏幕宽高数据
+      windowWidth = res.windowWidth / 750 * 690;   //以设计图750为主进行比例算换
+      windowHeight = res.windowWidth / 750 * 350    //以设计图750为主进行比例算换
+    } catch (e) {
+      console.error('getSystemInfoSync failed!');   //如果获取失败
+    }
+    new Charts({     //定义一个wxCharts图表实例
+      canvasId: 'rader',     //输入wxml中canvas的id
+      type: 'radar',       //图标展示的类型有:'line','pie','column','area','ring','radar'
+      categories: ['专业技能', '性格特质', '身体素质', '项目经验', '获奖情况'],    //模拟的x轴横坐标参数
+      animation: true,  //是否开启动画
+      series: [
+        {
+          name: '职业要求',
+          data: [4, 4, 3, 5, 4],  //数据点
+        },
+        {   //具体坐标数据
+        name:'当前能力',
+        data: [2,3,2,3,4],  //数据点
+      },
+
+      ],
+      extra:{
+        radar: {
+          max: 5,
+        }
+      },
+      width: 240,  //图表展示内容宽度
+      height: windowHeight,  //图表展示内容高度
+
+    });
     new Charts({
       canvasId: 'canvas1',
       background: '#000',
@@ -344,7 +438,7 @@ Page({
         name: '难度较大的需要掌握部分',
         data: 30,
       }],
-      width: 260,
+      width: 240,
       height: 250,
       dataLabel: true
     });
@@ -354,7 +448,7 @@ Page({
     var that=this
     setTimeout(function () {
       that.setData({
-        status:'授权杭电CAS'
+        status:'授权教育系统'
       })
     }, 1100)
     setTimeout(function () {
@@ -410,5 +504,45 @@ Page({
       url: '../mainIn/mainIn',
 
     })
-  }
+  },
+  
+  // 图片一直旋转动画
+  imageRotators: function () {
+    //连续动画需要添加定时器,所传参数每次+1就行
+    this.timeInterval = setInterval(function () {
+      this.data.rotateIndex = this.data.rotateIndex + 1;
+      this.animation.rotateZ(360 * (this.data.rotateIndex)).step()
+      this.setData({
+        animationData: this.animation.export()
+      })
+    }.bind(this), 500)
+    // 请求API接口或者别的操作
+    this.request()
+  },
+  // 停止旋转
+  stopRotators: function () {
+    if (this.timeInterval > 0) {
+      clearInterval(this.timeInterval)
+      this.timeInterval = 0
+    }
+  },
+  // 请求API接口或者别的操作
+  request: function (e) {
+    var that = this
+    console.log('request')
+    setTimeout(function () {
+      // 停止旋转
+      that.stopRotators()
+      console.log('请求到了数据或者操作完成,停止旋转')
+      // 这里是根据自己的业务逻辑设置
+      var data = true
+      
+     that.setData({
+       subima: '../images/whiteRight.png',
+     })
+    }, 2000)
+    setTimeout(function () {
+      that.tabadd()
+    }, 3000)
+  },
 })

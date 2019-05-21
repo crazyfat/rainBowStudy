@@ -1,0 +1,76 @@
+.topBlock{
+  background: linear-gradient(to right, #3b7ffa , rgb(49, 225, 248));
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  height: 130rpx;
+  width: 100%;
+  padding-left: 30rpx;
+}
+.return{
+  margin-top: 20rpx;
+  height: 60rpx;
+  width: 8%;
+}
+.titleVie{
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+.name{
+  font-size: 36rpx;
+  color: #fff;
+}
+.headVie{
+  position: fixed;
+  width: 200rpx;
+  height: 140rpx;
+  border-radius: 30rpx;
+  background-color: #000;
+  top:180rpx;
+}
+.container{
+  background-color: #f1f1f1;
+  height: 100%;
+  width: 100%;
+  padding: 30rpx;
+  display: flex;
+  justify-content: center;
+}
+.mainInfo{
+  height: 500rpx;
+  width:100%;
+  background-color: #fff;
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  padding: 16rpx;
+  padding-top: 80rpx;
+}
+.info{
+  border-style: solid;
+  border-width: 2rpx;
+  border-radius: 20rpx;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+
+}
+.rightContent{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 10rpx;
+}
+.leftContent{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  padding-right: 10rpx;
+}

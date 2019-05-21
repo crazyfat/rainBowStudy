@@ -1,0 +1,27 @@
+  <view class='topBlock'>
+    <image class='return' src='../images/return.png' bindtap='return'></image>
+    <view class="titleVie">
+    <text class="name">{{currentMsg[0].name}}</text>
+    </view>
+  </view>
+  <view class="container">
+    <view class="mainInfo">
+      <view class="info" >
+        <view class="rightContent" >
+          <text style="height:20%;" >这是标题1</text>
+          <text>这是文本1</text>
+          <text>这是文本2</text>
+          <text>这是文本3</text>
+          <text>这是文本4</text>
+        </view>
+        <view style='height:100%;width:2rpx;background-color:#000' ></view>
+        <view class="leftContent" >
+          <text  >这是标题1</text>
+          <text>这是文本1</text>
+          <text>这是文本2</text>
+          <text>这是文本3</text>
+          <text>这是文本4</text>
+        </view>
+      </view>
+    </view>
+  </view>

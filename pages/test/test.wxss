@@ -72,3 +72,21 @@
   border-radius: 100rpx;
   width: 60%;
 }
+
+.chooseSeries{
+  margin-top: 40rpx;
+  height: 100%;
+  width: 100prx;
+  padding: 10rpx;
+  white-space: nowrap;
+}
+.series{
+  display: inline-block;
+  margin-left: 15rpx;
+  width: 100rpx;
+  height: 60rpx;
+  border-style: solid;
+  border-width: 4rpx;
+  border-color: #3b7efab7;
+  text-align: center;
+}

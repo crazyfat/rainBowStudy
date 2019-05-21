@@ -44,6 +44,7 @@
   right: 100rpx;
   color: #3b7efaaf;
 }
+
 .last{
   position: fixed;
   top: 150rpx;
@@ -233,6 +234,7 @@
   font-size: 40rpx;
   margin-top: 20rpx;
 }
+
 .but{
   position: fixed;
   bottom: 80rpx;
@@ -242,6 +244,33 @@
   border-radius: 120rpx; 
   font-size: 36rpx;
   box-shadow:0rpx 1rpx 20rpx  2rpx #3b7efa7c;
+}
+.submitVie{
+   position: fixed;
+  bottom: 150rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.add-info{
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3b7ffa ;
+  color: #fff;
+  width: 300rpx;
+  border-radius: 120rpx; 
+  font-size: 36rpx;
+  box-shadow:0rpx 1rpx 20rpx  2rpx #3b7efa7c;
+  opacity: 0;
+  margin-top: 100rpx;
+}
+.subima{
+  margin-left: 6rpx;
+  width: 60rpx;
+  height: 60rpx;
 }
 .jobInfo{
   margin-top: 40rpx;
@@ -347,4 +376,16 @@
   border-bottom-color: rgba(143, 148, 153, 0.527);
   border-right-color: #fff;
   border-left-color: #fff;
+}
+.radar{
+  width: 100%;
+  height: 350rpx;
+  margin-top: 30rpx;
+}
+
+/*隐藏滚动条*/
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
 }
