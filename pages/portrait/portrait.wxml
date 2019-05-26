@@ -1,27 +1,106 @@
-  <view class='topBlock'>
-    <image class='return' src='../images/return.png' bindtap='return'></image>
-    <view class="titleVie">
-    <text class="name">{{currentMsg[0].name}}</text>
+<view class="lastPage" >
+    <view class="jobChoose">
+      <scroll-view  scroll-x style="width:auto;overflow:hidden;" class="jobItem">
+        <image class="ima1" style="opacity:{{ima1Op}}" src='{{ima1}}' bindtap="tabJob1" ></image>
+        <image class="ima1" style="opacity:{{ima2Op}}" src='{{ima2}}' bindtap="tabJob2" ></image>
+        <image class="ima1" style="opacity:{{ima3Op}}" src='{{ima3}}' bindtap="tabJob3" ></image>
+        <image class="ima1" style="opacity:0.2" src='{{ima4}}' ></image>
+        <image class="ima1" style="opacity:0.2" src='{{ima5}}' ></image>
+        <image class="ima1" style="opacity:0.2" src='{{ima6}}' ></image>
+      </scroll-view>
     </view>
-  </view>
-  <view class="container">
-    <view class="mainInfo">
-      <view class="info" >
-        <view class="rightContent" >
-          <text style="height:20%;" >这是标题1</text>
-          <text>这是文本1</text>
-          <text>这是文本2</text>
-          <text>这是文本3</text>
-          <text>这是文本4</text>
+    <scroll-view style="margin-top:100rpx;" scroll-y class="jobInfo">
+      <view class="bility"> 
+            <!--当前进度-->
+        <view style='height:40rpx'></view>
+        <view class="get">
+          <text class="getTitle">目标：</text>
+          <text class="list2">{{nowData.mubiao}}</text>
+        </view>    
+        <!--用户分析-->
+      <view style='margin-top:50rpx;' class="get">
+          <text class="getTitle">能力分析：</text>
+          <view class="canvasVie">
+              <canvas class="radar"  disable-scroll="true" canvas-id="rader" ></canvas>
+           </view>
+      </view>
+         
+
+        
+      <!--习得-->
+        <view style='margin-top:40rpx;' class="get">
+          <text class="getTitle">目标进度：</text>
+          <progress percent="{{PPrecent}}"  border-radius='100' show-info stroke-width="12" />
         </view>
-        <view style='height:100%;width:2rpx;background-color:#000' ></view>
-        <view class="leftContent" >
-          <text  >这是标题1</text>
-          <text>这是文本1</text>
-          <text>这是文本2</text>
-          <text>这是文本3</text>
-          <text>这是文本4</text>
+        <view style='height:40rpx'></view>
+        <view class="get">
+          <text class="getTitle">职业画像：</text>
+          <view class="getJob">
+            <text class="list1">{{nowData.huaxiang1}}</text>
+            <image class="IfFin" src='{{nowData.icon1}}' ></image>
+          </view>
+          <view class="getJob">
+            <text class="list1">{{nowData.huaxiang2}}</text>
+            <image class="IfFin" src='{{nowData.icon2}}' ></image>
+          </view>
+          <view class="getJob">
+            <text class="list1">{{nowData.huaxiang3}}</text>
+            <image class="IfFin" src='{{nowData.icon3}}' ></image>
+          </view>
+          <view class="getJob">
+            <text class="list1">{{nowData.huaxiang4}}</text>
+            <image class="IfFin" src='{{nowData.icon4}}' ></image>
+          </view>
+          <view class="getJob">
+            <text class="list1">{{nowData.huaxiang5}}</text>
+            <image class="IfFin" src='{{nowData.icon5}}' ></image>
+          </view>
         </view>
+      <!--未习得-->
+      <view style='height:40rpx'></view>
+        <view class="get">
+          <text class="getTitle">个人画像：</text>
+          <view class="getJob">
+            <text class="list1">{{nowData.geren1}}</text>
+          </view>
+          <view class="getJob">
+            <text class="list1">{{nowData.geren2}}</text>
+          </view>
+          <view class="getJob">
+            <text class="list1">{{nowData.geren3}}</text>
+          </view>
+          <view class="getJob">
+            <text class="list1">{{nowData.geren4}}</text>
+          </view>
+          <view class="getJob">
+            <text class="list1">{{nowData.geren5}}</text>
+          </view>
+          ...
+        </view>
+
+
+      <!--推荐学习-->
+        <view style='height:40rpx'></view>
+        <view class="get">
+          <text class="getTitle">现阶段为您推荐课程：</text>
+    <view wx:for="{{Videoarray}}" wx:key='key' wx:for-index="key">
+    <view class='videpList'>
+      <image class="videoPics" src='{{videoImages[key]}}' ></image>
+      <view class="videotext" >
+        <text class='videoname'>{{Videoarray[key].name}}</text>
+        <text class='videoTip'>{{Videoarray[key].title}}</text>
+        <text class='videoTeacher'>{{Videoarray[key].teacher}}</text>
       </view>
     </view>
-  </view>
+    </view>
+        </view>
+  
+
+
+      </view>
+    </scroll-view>
+
+
+
+
+ </view>
